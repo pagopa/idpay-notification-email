@@ -2,21 +2,17 @@ package it.gov.pagopa.email.notification.service;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
-import freemarker.template.TemplateException;
 import it.gov.pagopa.email.notification.connector.MailRequest;
 import it.gov.pagopa.email.notification.connector.NotificationConnector;
 import it.gov.pagopa.email.notification.dto.EmailMessageDTO;
 import it.gov.pagopa.email.notification.mapper.MailMessageMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.MailPreparationException;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
-import org.springframework.util.Assert;
-
-import java.io.IOException;
-import java.util.Map;
 
 @Slf4j
 @Service
@@ -57,8 +53,13 @@ public class NotificationServiceImpl implements NotificationService {
 
         try {
             //emailMessageDTO.setContent(this.templateService.processTemplate(emailMessageDTO.getContent(), emailMessageDTO.getTemplateName(), emailMessageDTO.getTemplateValues()));
-            Template template = this.freemarkerConfig.getTemplate(emailMessageDTO.getTemplateName()+"\\index.html");
-            String htmlContent = FreeMarkerTemplateUtils.processTemplateIntoString(template, emailMessageDTO.getTemplateValues());
+            String htmlContent = StringUtils.EMPTY;
+            if (StringUtils.isNotBlank(emailMessageDTO.getContent())) {
+                htmlContent = emailMessageDTO.getContent();
+            } else if (StringUtils.isNotBlank(emailMessageDTO.getTemplateName())) {
+                Template template = this.freemarkerConfig.getTemplate(emailMessageDTO.getTemplateName() + "\\index.html");
+                htmlContent = FreeMarkerTemplateUtils.processTemplateIntoString(template, emailMessageDTO.getTemplateValues());
+            }
             emailMessageDTO.setContent(htmlContent);
             MailRequest mailRequest = this.mailMessageMapper.toMessageRequest(emailMessageDTO);
             this.notificationConnector.sendMessage(mailRequest);
