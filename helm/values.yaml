@@ -1,0 +1,107 @@
+microservice-chart:
+  namespace: "idpay"
+  nameOverride: ""
+  fullnameOverride: ""
+
+
+  livenessProbe:
+    httpGet:
+      path: /actuator/health
+      port: 8080
+    initialDelaySeconds: 120
+    failureThreshold: 6
+    periodSeconds: 10
+
+  readinessProbe:
+    httpGet:
+      path: /actuator/health
+      port: 8080
+    initialDelaySeconds: 120
+    failureThreshold: 6
+    periodSeconds: 10
+
+  deployment:
+    create: true
+
+  service:
+    create: true
+    type: ClusterIP
+    port: 8080
+
+  ingress:
+    create: true
+    path: /idpayportalwelfarebackendinitiative/(.*)
+
+  serviceAccount:
+    create: false
+    annotations: {}
+    name: ""
+
+  podAnnotations: {}
+
+  podSecurityContext:
+    seccompProfile:
+      type: RuntimeDefault
+
+  securityContext:
+    allowPrivilegeEscalation: false
+
+#  autoscaling:
+#    enable: true
+#    minReplica: 1
+#    maxReplica: 2
+#    pollingInterval: 30 # seconds
+#    cooldownPeriod: 300 # seconds
+#    triggers:
+#      - type: azure-monitor
+#        metadata:
+#          tenantId: 7788edaf-0346-4068-9d79-c868aed15b3d
+#          subscriptionId: ac17914c-79bf-48fa-831e-1359ef74c1d5
+#          resourceGroupName: dvopla-d-sec-rg
+#          resourceURI: Microsoft.KeyVault/vaults/dvopla-d-neu-kv
+#          metricName: ServiceApiHit
+#          # metricNamespace: Microsoft.KeyVault/vaults
+#          # metricFilter: namespace eq 'default'
+#          # metricAggregationInterval: "-1:1:0"
+#          metricAggregationType: Count
+#          targetValue: "30"
+
+
+  envConfig:
+    MONGODB_DBNAME: idpay
+    APPLICATIONINSIGHTS_ROLE_NAME: "idpayportalwelfarebackendinitiative"
+    APPLICATIONINSIGHTS_INSTRUMENTATION_LOGGING_LEVEL: "OFF"
+    APPLICATIONINSIGHTS_INSTRUMENTATION_MICROMETER_ENABLED: "false"
+    APP_INITIATIVE_CONDITIONS_NOTIFY_RE: "true"
+    APP_INITIATIVE_CONDITIONS_NOTIFY_IO: "true"
+    IO_BACKEND_SERVICE_DEPARTMENT_NAME: IDPAY
+    IO_BACKEND_SERVICE_IS_VISIBLE: "false"
+    LOG_LEVEL_INITIATIVE: INFO
+    FEIGN_CLIENT_CONFIG_IO_LOG_LEVEL: basic
+
+  envConfigMapExternals:
+    idpay-common:
+      TZ: TZ
+      JAVA_TOOL_OPTIONS: JAVA_TOOL_OPTIONS
+    rest-client:
+      IO_BACKEND_SERVICE_BASE_URL: io_backend_base_url
+      GROUP_MS_HOST: idpay_group_host
+    idpay-eventhub-01:
+      KAFKA_BINDER_BROKER_ENDPOINT_LIST: kafka_broker
+      KAFKA_INITIATIVE_SASL_MECHANISM: kafka_sasl_mechanism
+      KAFKA_INITIATIVE_SECURITY_PROTOCOL: kafka_security_protocol
+      KAFKA_INITIATIVE_OUTCOME_TOPIC: idpay_rule_update_topic
+
+  envSecret:
+    MONGODB_URI: mongodb-connection-string
+    KAFKA_INITIATIVE_SASL_JAAS_CONFIG: evh-idpay-rule-update-idpay-rule-update-producer-jaas-config-idpay-01
+    IO_BACKEND_SERVICE_SUBSCRIPTION_API_KEY: io-backend-aggregate-api-key
+#    UTIL_CRYPTO_AES_SECRET_TYPE_PBE_SALT: util-crypto-aes-secret-type-pbe-salt
+#    UTIL_CRYPTO_AES_SECRET_TYPE_PBE_PASSPHRASE: util-crypto-aes-secret-type-pbe-passphrase
+#    UTIL_CRYPTO_AES_MODE_GCM_IV: util-crypto-aes-mode-gcm-iv
+
+  # nodeSelector: {}
+
+  # tolerations: []
+
+  # affinity: {}
