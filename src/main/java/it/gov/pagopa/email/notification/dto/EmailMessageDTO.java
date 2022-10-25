@@ -5,9 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.util.Map;
 
 @Builder
@@ -17,8 +14,7 @@ import java.util.Map;
 public class EmailMessageDTO {
 
     private String templateName;
-    @Valid
-    private Map<@NotBlank String,@NotNull String> templateValues;
+    private Map<String,String> templateValues;
     private String subject;
     private String content;
     private String senderEmail;

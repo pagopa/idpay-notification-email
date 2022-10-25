@@ -11,7 +11,6 @@ import it.gov.pagopa.email.notification.dto.EmailMessageDTO;
 import it.gov.pagopa.email.notification.dto.ErrorDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RequestMapping(value = "/idpay/email-notification")
@@ -29,7 +28,7 @@ public interface EmailNotificationApiController {
     @PostMapping(value = "/notify",
             produces = {"application/json"},
             consumes = {"application/json"})
-    ResponseEntity<Void> sendEmail(@Parameter(in = ParameterIn.DEFAULT, schema = @Schema()) @RequestBody EmailMessageDTO body);
+    ResponseEntity<Void> sendEmail(@Parameter(in = ParameterIn.DEFAULT, schema = @Schema()) EmailMessageDTO body);
 
 }
 

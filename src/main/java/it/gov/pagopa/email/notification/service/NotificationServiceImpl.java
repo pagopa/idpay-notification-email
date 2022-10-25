@@ -48,8 +48,8 @@ public class NotificationServiceImpl implements NotificationService {
 
     @Override
     public void sendMessage(EmailMessageDTO emailMessageDTO) {
-        log.trace("sendMessageToCustomerCare start");
-        log.debug("sendMessageToCustomerCare emailMessageDTO = {}", emailMessageDTO);
+        log.trace("sendMessage start");
+        log.debug("sendMessage emailMessageDTO = {}", emailMessageDTO);
 
         if (emailMessageDTO.getSenderEmail() != null) {
             processAssistance(emailMessageDTO);
@@ -57,8 +57,12 @@ public class NotificationServiceImpl implements NotificationService {
             processNoReply(emailMessageDTO);
         }
 
+        sendNotification(emailMessageDTO);
+        log.trace("sendMessage end");
+    }
+
+    private void sendNotification(EmailMessageDTO emailMessageDTO) {
         try {
-            //emailMessageDTO.setContent(this.templateService.processTemplate(emailMessageDTO.getContent(), emailMessageDTO.getTemplateName(), emailMessageDTO.getTemplateValues()));
             String htmlContent = StringUtils.EMPTY;
             if (StringUtils.isNotBlank(emailMessageDTO.getContent())) {
                 htmlContent = emailMessageDTO.getContent();
@@ -72,24 +76,8 @@ public class NotificationServiceImpl implements NotificationService {
         } catch (Exception e) {
             throw new MailPreparationException(e);
         }
-        log.trace("sendMessageToCustomerCare end");
     }
-/*
-    private void sendNotification(String email, String templateName, String subject, Map<String, String> dataModel) {
 
-        try {
-            Template template = freemarkerConfig.getTemplate(templateName);
-            String html = FreeMarkerTemplateUtils.processTemplateIntoString(template, dataModel);
-            MessageRequest messageRequest = new MessageRequest();
-            messageRequest.setContent(html);
-            messageRequest.setReceiverEmail(email);
-            messageRequest.setSubject(subject);
-            notificationConnector.sendNotificationToUser(messageRequest);
-        } catch (Exception e) {
-            throw new MailPreparationException(e);
-        }
-    }
-*/
     private void processNoReply(EmailMessageDTO emailMessageDTO) {
         emailMessageDTO.setSenderEmail(noReplySenderMailAddress);
         emailMessageDTO.setSubject(String.format("%s", noReplySubjectPrefix)+emailMessageDTO.getSubject());
