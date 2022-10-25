@@ -21,23 +21,29 @@ public class NotificationServiceImpl implements NotificationService {
     private final Configuration freemarkerConfig;
     private final NotificationConnector notificationConnector;
     private final MailMessageMapper mailMessageMapper;
-    private final String assistanceMailAddress;
-    private final String noReplyMailAddress;
+    private final String assistanceRecipientMailAddress;
+    private final String assistanceSubjectPrefix;
+    private final String noReplySenderMailAddress;
+    private final String noReplySubjectPrefix;
 
     @Autowired
     NotificationServiceImpl(
             Configuration freemarkerConfig,
             NotificationConnector notificationConnector,
             MailMessageMapper mailMessageMapper,
-            @Value("${app.email.notification.assistance}") String assistanceMailAddress,
-            @Value("${app.email.notification.no-reply}") String noReplyMailAddress
+            @Value("${app.email.notification.assistance.sender}") String assistanceRecipientMailAddress,
+            @Value("${app.email.notification.assistance.subject-prefix}") String assistanceSubjectPrefix,
+            @Value("${app.email.notification.no-reply.sender}") String noReplySenderMailAddress,
+            @Value("${app.email.notification.no-reply.subject-prefix}") String noReplySubjectPrefix
 
     ) {
         this.freemarkerConfig = freemarkerConfig;
         this.notificationConnector = notificationConnector;
         this.mailMessageMapper = mailMessageMapper;
-        this.assistanceMailAddress = assistanceMailAddress;
-        this.noReplyMailAddress = noReplyMailAddress;
+        this.assistanceRecipientMailAddress = assistanceRecipientMailAddress;
+        this.assistanceSubjectPrefix = assistanceSubjectPrefix;
+        this.noReplySenderMailAddress = noReplySenderMailAddress;
+        this.noReplySubjectPrefix = noReplySubjectPrefix;
     }
 
     @Override
@@ -85,11 +91,13 @@ public class NotificationServiceImpl implements NotificationService {
     }
 */
     private void processNoReply(EmailMessageDTO emailMessageDTO) {
-        emailMessageDTO.setSenderEmail(noReplyMailAddress);
+        emailMessageDTO.setSenderEmail(noReplySenderMailAddress);
+        emailMessageDTO.setSubject(String.format("%s", noReplySubjectPrefix)+emailMessageDTO.getSubject());
     }
 
     private void processAssistance(EmailMessageDTO emailMessageDTO) {
-        emailMessageDTO.setRecipientEmail(assistanceMailAddress);
+        emailMessageDTO.setRecipientEmail(assistanceRecipientMailAddress);
+        emailMessageDTO.setSubject(String.format("%s", assistanceSubjectPrefix)+emailMessageDTO.getSubject());
     }
 
 }

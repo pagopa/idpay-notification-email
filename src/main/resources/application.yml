@@ -40,7 +40,9 @@ logging:
 app:
   email:
     notification:
-      assistance: ${ASSISTANCE_MAIL:assistenza.IDPay@pagopa.it}
-      no-reply: ${NO_REPLY_MAIL:noreply_idpay@pagopa.it} #FIXME
-#      assistance-subject-prefix: ${ASSISTANCE_MAIL_SUBJECT_PREFIX:${ENV_TARGET:} - }
-#      user-subject-prefix: ${NOTIFICATION_TO_USER_SUBJECT_PREFIX:${ENV_TARGET:} - }
+      assistance:
+        sender: ${ASSISTANCE_MAIL:assistenza.IDPay@pagopa.it}
+        subject-prefix: ${ASSISTANCE_MAIL_SUBJECT_PREFIX:${ENV_TARGET:DEV} - }
+      no-reply:
+        sender: ${NO_REPLY_MAIL:noreply_idpay@pagopa.it} #FIXME
+        subject-prefix: ${NO_REPLY_SUBJECT_PREFIX:${ENV_TARGET:DEV} - }

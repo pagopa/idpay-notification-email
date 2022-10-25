@@ -5,6 +5,7 @@ import it.gov.pagopa.email.notification.service.NotificationService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,7 +22,7 @@ public class EmailNotificationApiControllerImpl implements EmailNotificationApiC
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @Override
-    public ResponseEntity<Void> sendEmail(EmailMessageDTO emailMessageDTO) {
+    public ResponseEntity<Void> sendEmail(@Validated EmailMessageDTO emailMessageDTO) {
         notificationService.sendMessage(emailMessageDTO);
         return ResponseEntity.noContent().build();
     }
