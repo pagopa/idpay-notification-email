@@ -18,12 +18,6 @@ spring:
     properties.mail.smtp.starttls.enable: ${MAIL_SERVER_SMTP_TLS_ENABLE:true}
     protocol: ${MAIL_SERVER_PROTOCOL:smtp}
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
 logging:
   level:
     root: ${LOG_LEVEL_ROOT:INFO}
