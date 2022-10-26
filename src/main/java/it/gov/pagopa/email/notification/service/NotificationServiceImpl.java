@@ -14,6 +14,8 @@ import org.springframework.mail.MailPreparationException;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 
+import java.util.Map;
+
 @Slf4j
 @Service
 public class NotificationServiceImpl implements NotificationService {
@@ -21,6 +23,7 @@ public class NotificationServiceImpl implements NotificationService {
     private final Configuration freemarkerConfig;
     private final NotificationConnector notificationConnector;
     private final MailMessageMapper mailMessageMapper;
+    private final MessageService messageService;
     private final String assistanceRecipientMailAddress;
     private final String assistanceSubjectPrefix;
     private final String noReplySenderMailAddress;
@@ -31,6 +34,7 @@ public class NotificationServiceImpl implements NotificationService {
             Configuration freemarkerConfig,
             NotificationConnector notificationConnector,
             MailMessageMapper mailMessageMapper,
+            MessageService messageService,
             @Value("${app.email.notification.assistance.recipient}") String assistanceRecipientMailAddress,
             @Value("${app.email.notification.assistance.subject-prefix}") String assistanceSubjectPrefix,
             @Value("${app.email.notification.no-reply.sender}") String noReplySenderMailAddress,
@@ -40,6 +44,7 @@ public class NotificationServiceImpl implements NotificationService {
         this.freemarkerConfig = freemarkerConfig;
         this.notificationConnector = notificationConnector;
         this.mailMessageMapper = mailMessageMapper;
+        this.messageService = messageService;
         this.assistanceRecipientMailAddress = assistanceRecipientMailAddress;
         this.assistanceSubjectPrefix = assistanceSubjectPrefix;
         this.noReplySenderMailAddress = noReplySenderMailAddress;
@@ -56,7 +61,8 @@ public class NotificationServiceImpl implements NotificationService {
             if(StringUtils.isNotBlank(emailMessageDTO.getTemplateName())) {
                 this.processGeneralEmail(emailMessageDTO);
                 Template template = this.freemarkerConfig.getTemplate(emailMessageDTO.getTemplateName() + "\\index.html");
-                htmlContent = FreeMarkerTemplateUtils.processTemplateIntoString(template, emailMessageDTO.getTemplateValues());
+                Map<String, String> placeHolderWithInternationalization = messageService.getMessages(emailMessageDTO.getTemplateValues());
+                htmlContent = FreeMarkerTemplateUtils.processTemplateIntoString(template, placeHolderWithInternationalization);
             }
             else{
                 this.processToAssistance(emailMessageDTO);
