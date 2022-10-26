@@ -1,4 +1,4 @@
-package it.gov.pagopa.notification.email;
+package it.gov.pagopa.email.notification;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
