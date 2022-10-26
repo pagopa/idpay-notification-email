@@ -31,7 +31,7 @@ public class NotificationServiceImpl implements NotificationService {
             Configuration freemarkerConfig,
             NotificationConnector notificationConnector,
             MailMessageMapper mailMessageMapper,
-            @Value("${app.email.notification.assistance.sender}") String assistanceRecipientMailAddress,
+            @Value("${app.email.notification.assistance.recipient}") String assistanceRecipientMailAddress,
             @Value("${app.email.notification.assistance.subject-prefix}") String assistanceSubjectPrefix,
             @Value("${app.email.notification.no-reply.sender}") String noReplySenderMailAddress,
             @Value("${app.email.notification.no-reply.subject-prefix}") String noReplySubjectPrefix
@@ -51,24 +51,16 @@ public class NotificationServiceImpl implements NotificationService {
         log.trace("sendMessage start");
         log.debug("sendMessage emailMessageDTO = {}", emailMessageDTO);
 
-        if (emailMessageDTO.getSenderEmail() != null) {
-            processAssistance(emailMessageDTO);
-        } else {
-            processNoReply(emailMessageDTO);
-        }
-
-        sendNotification(emailMessageDTO);
-        log.trace("sendMessage end");
-    }
-
-    private void sendNotification(EmailMessageDTO emailMessageDTO) {
         try {
-            String htmlContent = StringUtils.EMPTY;
-            if (StringUtils.isNotBlank(emailMessageDTO.getContent())) {
-                htmlContent = emailMessageDTO.getContent();
-            } else if (StringUtils.isNotBlank(emailMessageDTO.getTemplateName())) {
+            String htmlContent;
+            if(StringUtils.isNotBlank(emailMessageDTO.getTemplateName())) {
+                this.processGeneralEmail(emailMessageDTO);
                 Template template = this.freemarkerConfig.getTemplate(emailMessageDTO.getTemplateName() + "\\index.html");
                 htmlContent = FreeMarkerTemplateUtils.processTemplateIntoString(template, emailMessageDTO.getTemplateValues());
+            }
+            else{
+                this.processToAssistance(emailMessageDTO);
+                htmlContent = emailMessageDTO.getContent();
             }
             emailMessageDTO.setContent(htmlContent);
             MailRequest mailRequest = this.mailMessageMapper.toMessageRequest(emailMessageDTO);
@@ -76,14 +68,17 @@ public class NotificationServiceImpl implements NotificationService {
         } catch (Exception e) {
             throw new MailPreparationException(e);
         }
+
+        log.trace("sendMessage end");
     }
 
-    private void processNoReply(EmailMessageDTO emailMessageDTO) {
-        emailMessageDTO.setSenderEmail(noReplySenderMailAddress);
+    private void processGeneralEmail(EmailMessageDTO emailMessageDTO) {
+        if(emailMessageDTO.getSenderEmail() == null)
+            emailMessageDTO.setSenderEmail(noReplySenderMailAddress);
         emailMessageDTO.setSubject(String.format("%s", noReplySubjectPrefix)+emailMessageDTO.getSubject());
     }
 
-    private void processAssistance(EmailMessageDTO emailMessageDTO) {
+    private void processToAssistance(EmailMessageDTO emailMessageDTO) {
         emailMessageDTO.setRecipientEmail(assistanceRecipientMailAddress);
         emailMessageDTO.setSubject(String.format("%s", assistanceSubjectPrefix)+emailMessageDTO.getSubject());
     }

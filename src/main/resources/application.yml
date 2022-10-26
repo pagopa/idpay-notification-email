@@ -36,7 +36,7 @@ app:
   email:
     notification:
       assistance:
-        sender: ${ASSISTANCE_MAIL:assistenza.IDPay@pagopa.it}
+        recipient: ${ASSISTANCE_MAIL:assistenza.IDPay@pagopa.it}
         subject-prefix: ${ASSISTANCE_MAIL_SUBJECT_PREFIX:${ENV_TARGET:DEV} - }
       no-reply:
         sender: ${NO_REPLY_MAIL:noreply_idpay@pagopa.it} #FIXME
