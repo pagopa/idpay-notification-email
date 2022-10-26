@@ -14,10 +14,10 @@ import java.util.Map;
 public class EmailMessageDTO {
 
     private String templateName;
+    private Map<String,String> templateValues;
     private String subject;
-    private String senderEmail;
-    private Map<String, String> templateValues;
-    private String recipientEmail;
     private String content;
+    private String senderEmail;
+    private String recipientEmail;
 
 }

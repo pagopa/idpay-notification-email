@@ -18,12 +18,6 @@ spring:
     properties.mail.smtp.starttls.enable: ${MAIL_SERVER_SMTP_TLS_ENABLE:true}
     protocol: ${MAIL_SERVER_PROTOCOL:smtp}
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
 logging:
   level:
     root: ${LOG_LEVEL_ROOT:INFO}
@@ -32,6 +26,7 @@ logging:
     org.springframework.cloud: ${LOG_LEVEL_SPRING_CLOUD:WARN}
     org.springframework.data: ${LOG_LEVEL_SPRING_DATA:INFO}
     org.springframework.boot: ${LOG_LEVEL_SPRING_BOOT:INFO}
+    org.springframework.web: ${LOG_LEVEL_SPRING_WEB:INFO}
     io.swagger: ${LOG_LEVEL_IO_SWAGGER:WARN}
     javax.persistence: ${LOG_LEVEL_JAVAX_PERSISTENCE:INFO}
     org.hibernate: ${LOG_LEVEL_ORG_HIBERNATE:INFO}
@@ -40,7 +35,9 @@ logging:
 app:
   email:
     notification:
-      assistance: ${ASSISTANCE_MAIL:assistenza.IDPay@pagopa.it}
-      no-reply: ${NO_REPLY_MAIL:noreply_idpay@pagopa.it} #FIXME
-#      assistance-subject-prefix: ${ASSISTANCE_MAIL_SUBJECT_PREFIX:${ENV_TARGET:} - }
-#      user-subject-prefix: ${NOTIFICATION_TO_USER_SUBJECT_PREFIX:${ENV_TARGET:} - }
+      assistance:
+        recipient: ${ASSISTANCE_MAIL:assistenza.IDPay@pagopa.it}
+        subject-prefix: ${ASSISTANCE_MAIL_SUBJECT_PREFIX:${ENV_TARGET:DEV} - }
+      no-reply:
+        sender: ${NO_REPLY_MAIL:noreply_idpay@pagopa.it} #FIXME
+        subject-prefix: ${NO_REPLY_SUBJECT_PREFIX:${ENV_TARGET:DEV} - }

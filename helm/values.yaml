@@ -71,16 +71,21 @@ microservice-chart:
     APPLICATIONINSIGHTS_ROLE_NAME: "idpaynotificationemail"
     APPLICATIONINSIGHTS_INSTRUMENTATION_LOGGING_LEVEL: "OFF"
     APPLICATIONINSIGHTS_INSTRUMENTATION_MICROMETER_ENABLED: "false"
+    ASSISTANCE_MAIL: "assistenza.IDPay@pagopa.it"
+    NO_REPLY_MAIL: "noreply_idpay@pagopa.it"
 
   envConfigMapExternals:
     idpay-common:
       TZ: TZ
       JAVA_TOOL_OPTIONS: JAVA_TOOL_OPTIONS
     notification-email:
-      MAIL_SERVER_USERNAME: MAIL_SERVER_USERNAME
-      MAIL_SERVER_PASSWORD: MAIL_SERVER_PASSWORD
-      MAIL_SERVER_HOST: MAIL_SERVER_HOST
-      MAIL_SERVER_PORT: MAIL_SERVER_PORT
+      mail_server_host: "smtp.mailosaur.net"
+      mail_server_port: "587"
+
+  envSecret:
+    MAIL_SERVER_USERNAME: mail-server-username
+    MAIL_SERVER_PASSWORD: mail-server-password
+
   # nodeSelector: {}
 
   # tolerations: []
