@@ -76,7 +76,11 @@ microservice-chart:
     idpay-common:
       TZ: TZ
       JAVA_TOOL_OPTIONS: JAVA_TOOL_OPTIONS
-
+    notification-email:
+      MAIL_SERVER_USERNAME: MAIL_SERVER_USERNAME
+      MAIL_SERVER_PASSWORD: MAIL_SERVER_PASSWORD
+      MAIL_SERVER_HOST: MAIL_SERVER_HOST
+      MAIL_SERVER_PORT: MAIL_SERVER_PORT
   # nodeSelector: {}
 
   # tolerations: []
