@@ -36,6 +36,11 @@ microservice-chart:
 #          metricAggregationType: Count
 #          targetValue: "30"
 
+  envConfig:
+    ENV_TARGET: "UAT"
+    ASSISTANCE_MAIL_SUBJECT_PREFIX: "[ASSISTANCE]"
+    NO_REPLY_SUBJECT_PREFIX: "[NO-REPLY]"
+
   envSecret:
     aks-api-url: cstar-u-weu-uat01-aks-apiserver-url
 
