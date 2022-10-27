@@ -4,6 +4,8 @@ spring:
     cache: true
     settings:
       recognize_standard_file_extensions: true
+#  messages:
+#    basename: templates/messages/labels
 
   data:
     mongodb:
