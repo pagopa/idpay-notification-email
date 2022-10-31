@@ -19,7 +19,7 @@ public class MessageService {
     }
 
     public Map<String, String> getMessages(Map<String, String> codes) {
-        return codes.entrySet().stream()
-                .collect(Collectors.toMap(Map.Entry::getKey, e -> getMessage(e.getValue())));
+        codes.replaceAll((k, v) -> getMessage(v));
+        return codes;
     }
 }

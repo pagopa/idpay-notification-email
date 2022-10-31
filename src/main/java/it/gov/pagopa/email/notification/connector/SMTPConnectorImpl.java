@@ -11,11 +11,11 @@ import javax.mail.internet.MimeMessage;
 
 @Slf4j
 @Service
-public class NotificationConnectorImpl implements NotificationConnector {
+public class SMTPConnectorImpl implements SMTPConnector {
 
     private final JavaMailSender mailSender;
 
-    public NotificationConnectorImpl(JavaMailSender mailSender) {
+    public SMTPConnectorImpl(JavaMailSender mailSender) {
         this.mailSender = mailSender;
     }
 
