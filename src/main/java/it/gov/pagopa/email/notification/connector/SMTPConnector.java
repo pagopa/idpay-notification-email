@@ -1,6 +1,6 @@
 package it.gov.pagopa.email.notification.connector;
 
-public interface NotificationConnector {
+public interface SMTPConnector {
 
     public void sendMessage(MailRequest mailRequest);
 

@@ -3,7 +3,7 @@ package it.gov.pagopa.email.notification.service;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import it.gov.pagopa.email.notification.connector.MailRequest;
-import it.gov.pagopa.email.notification.connector.NotificationConnector;
+import it.gov.pagopa.email.notification.connector.SMTPConnector;
 import it.gov.pagopa.email.notification.dto.EmailMessageDTO;
 import it.gov.pagopa.email.notification.mapper.MailMessageMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -21,7 +21,7 @@ import java.util.Map;
 public class NotificationServiceImpl implements NotificationService {
 
     private final Configuration freemarkerConfig;
-    private final NotificationConnector notificationConnector;
+    private final SMTPConnector SMTPConnector;
     private final MailMessageMapper mailMessageMapper;
     private final MessageService messageService;
     private final String assistanceRecipientMailAddress;
@@ -32,7 +32,7 @@ public class NotificationServiceImpl implements NotificationService {
     @Autowired
     NotificationServiceImpl(
             Configuration freemarkerConfig,
-            NotificationConnector notificationConnector,
+            SMTPConnector SMTPConnector,
             MailMessageMapper mailMessageMapper,
             MessageService messageService,
             @Value("${app.email.notification.assistance.recipient}") String assistanceRecipientMailAddress,
@@ -42,7 +42,7 @@ public class NotificationServiceImpl implements NotificationService {
 
     ) {
         this.freemarkerConfig = freemarkerConfig;
-        this.notificationConnector = notificationConnector;
+        this.SMTPConnector = SMTPConnector;
         this.mailMessageMapper = mailMessageMapper;
         this.messageService = messageService;
         this.assistanceRecipientMailAddress = assistanceRecipientMailAddress;
@@ -70,7 +70,7 @@ public class NotificationServiceImpl implements NotificationService {
             }
             emailMessageDTO.setContent(htmlContent);
             MailRequest mailRequest = this.mailMessageMapper.toMessageRequest(emailMessageDTO);
-            this.notificationConnector.sendMessage(mailRequest);
+            this.SMTPConnector.sendMessage(mailRequest);
         } catch (Exception e) {
             throw new MailPreparationException(e);
         }
