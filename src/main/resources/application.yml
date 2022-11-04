@@ -1,14 +1,24 @@
 spring:
+  freemarker:
+    enabled: true
+    cache: true
+    settings:
+      recognize_standard_file_extensions: true
+#  messages:
+#    basename: templates/messages/labels
+
   data:
     mongodb:
       uri: ${MONGODB_URI}
       database: ${MONGODB_DBNAME}
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+  mail:
+    host: ${MAIL_SERVER_HOST:}
+    port: ${MAIL_SERVER_PORT:}
+    username: ${MAIL_SERVER_USERNAME:}
+    password: ${MAIL_SERVER_PASSWORD:}
+    properties.mail.smtp.auth: ${MAIL_SERVER_SMTP_AUTH:true}
+    properties.mail.smtp.starttls.enable: ${MAIL_SERVER_SMTP_TLS_ENABLE:true}
+    protocol: ${MAIL_SERVER_PROTOCOL:smtp}
 
 logging:
   level:
@@ -18,8 +28,18 @@ logging:
     org.springframework.cloud: ${LOG_LEVEL_SPRING_CLOUD:WARN}
     org.springframework.data: ${LOG_LEVEL_SPRING_DATA:INFO}
     org.springframework.boot: ${LOG_LEVEL_SPRING_BOOT:INFO}
+    org.springframework.web: ${LOG_LEVEL_SPRING_WEB:INFO}
     io.swagger: ${LOG_LEVEL_IO_SWAGGER:WARN}
     javax.persistence: ${LOG_LEVEL_JAVAX_PERSISTENCE:INFO}
     org.hibernate: ${LOG_LEVEL_ORG_HIBERNATE:INFO}
     org.mongodb.driver: ${LOG_LEVEL_MONGODB_DRIVER:WARN}
 
+app:
+  email:
+    notification:
+      assistance:
+        recipient: ${ASSISTANCE_MAIL:assistenza.IDPay@pagopa.it}
+        subject-prefix: ${ASSISTANCE_MAIL_SUBJECT_PREFIX:${ENV_TARGET:DEV} - }
+      no-reply:
+        sender: ${NO_REPLY_MAIL:noreply_idpay@pagopa.it} #FIXME
+        subject-prefix: ${NO_REPLY_SUBJECT_PREFIX:${ENV_TARGET:DEV} - }
