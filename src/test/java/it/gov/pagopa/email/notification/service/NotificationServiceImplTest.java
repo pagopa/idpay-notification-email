@@ -1,8 +1,8 @@
 package it.gov.pagopa.email.notification.service;
 
 import freemarker.template.Configuration;
-import it.gov.pagopa.email.notification.connector.MailRequest;
-import it.gov.pagopa.email.notification.connector.SMTPConnector;
+import it.gov.pagopa.email.notification.dto.smtp.MailRequest;
+import it.gov.pagopa.email.notification.connector.smtp.SMTPConnector;
 import it.gov.pagopa.email.notification.dto.EmailMessageDTO;
 import it.gov.pagopa.email.notification.mapper.MailMessageMapper;
 import org.junit.jupiter.api.Test;

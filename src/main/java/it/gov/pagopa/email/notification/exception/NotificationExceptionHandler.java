@@ -13,13 +13,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class NotificationExceptionHandler {
 
-    @ExceptionHandler({MessageRequestException.class})
-    ResponseEntity<ErrorDTO> handleMessageRequestException(MessageRequestException ex) {
-        log.warn(ex.getMessage());
-        return new ResponseEntity<>(new ErrorDTO(ex.getCode(), ex.getMessage()),
-                ex.getHttpStatus());
-    }
-
     @ExceptionHandler({MailPreparationException.class})
     ResponseEntity<ErrorDTO> handleMailPreparationException(MailPreparationException ex) {
         log.warn(ex.getMessage());

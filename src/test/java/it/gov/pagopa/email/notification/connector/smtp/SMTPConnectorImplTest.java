@@ -1,5 +1,8 @@
-package it.gov.pagopa.email.notification.connector;
+package it.gov.pagopa.email.notification.connector.smtp;
 
+import it.gov.pagopa.email.notification.connector.smtp.SMTPConnector;
+import it.gov.pagopa.email.notification.connector.smtp.SMTPConnectorImpl;
+import it.gov.pagopa.email.notification.dto.smtp.MailRequest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;

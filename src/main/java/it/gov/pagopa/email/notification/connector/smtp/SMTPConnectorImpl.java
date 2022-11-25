@@ -1,5 +1,6 @@
-package it.gov.pagopa.email.notification.connector;
+package it.gov.pagopa.email.notification.connector.smtp;
 
+import it.gov.pagopa.email.notification.dto.smtp.MailRequest;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.mail.javamail.JavaMailSender;
