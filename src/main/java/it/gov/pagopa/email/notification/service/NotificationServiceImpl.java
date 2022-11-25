@@ -86,7 +86,7 @@ public class NotificationServiceImpl implements NotificationService {
 
     private void processToAssistance(EmailMessageDTO emailMessageDTO) {
         emailMessageDTO.setRecipientEmail(assistanceRecipientMailAddress);
-        emailMessageDTO.setSubject(String.format("%s", assistanceSubjectPrefix)+emailMessageDTO.getSubject());
+        emailMessageDTO.setSubject(String.format("%s", assistanceSubjectPrefix)+emailMessageDTO.getSubject()); //FIXME Check UseCase for Subject 'null' to avoid concatenation like "PREFIXnull"
     }
 
 }
