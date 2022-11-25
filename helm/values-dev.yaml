@@ -38,6 +38,10 @@ microservice-chart:
 
   envConfig:
     ENV_TARGET: "DEV"
+    LOG_LEVEL_PAGOPA: INFO
+    LOG_LEVEL_INITIATIVE_NOTIFICATION_EMAIL: INFO
+    LOG_LEVEL_SPRING_BOOT: INFO
+    LOG_LEVEL_SPRING_WEB: INFO
 
   envSecret:
     aks-api-url: cstar-d-weu-dev01-aks-apiserver-url

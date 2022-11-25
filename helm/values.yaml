@@ -87,6 +87,7 @@ microservice-chart:
   envSecret:
     MAIL_SERVER_USERNAME: mail-server-username
     MAIL_SERVER_PASSWORD: mail-server-password
+#    APPLICATIONINSIGHTS_CONNECTION_STRING: appinsights-instrumentation-key
 
   # nodeSelector: {}
 
