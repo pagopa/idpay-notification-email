@@ -2,8 +2,8 @@ package it.gov.pagopa.email.notification.service;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
-import it.gov.pagopa.email.notification.connector.MailRequest;
-import it.gov.pagopa.email.notification.connector.SMTPConnector;
+import it.gov.pagopa.email.notification.dto.smtp.MailRequest;
+import it.gov.pagopa.email.notification.connector.smtp.SMTPConnector;
 import it.gov.pagopa.email.notification.dto.EmailMessageDTO;
 import it.gov.pagopa.email.notification.mapper.MailMessageMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -86,7 +86,7 @@ public class NotificationServiceImpl implements NotificationService {
 
     private void processToAssistance(EmailMessageDTO emailMessageDTO) {
         emailMessageDTO.setRecipientEmail(assistanceRecipientMailAddress);
-        emailMessageDTO.setSubject(String.format("%s", assistanceSubjectPrefix)+emailMessageDTO.getSubject());
+        emailMessageDTO.setSubject(String.format("%s", assistanceSubjectPrefix)+emailMessageDTO.getSubject()); //FIXME Check UseCase for Subject 'null' to avoid concatenation like "PREFIXnull"
     }
 
 }

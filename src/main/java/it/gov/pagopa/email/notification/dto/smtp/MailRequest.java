@@ -1,4 +1,4 @@
-package it.gov.pagopa.email.notification.connector;
+package it.gov.pagopa.email.notification.dto.smtp;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

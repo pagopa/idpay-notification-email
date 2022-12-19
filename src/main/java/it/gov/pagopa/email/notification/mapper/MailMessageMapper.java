@@ -1,6 +1,6 @@
 package it.gov.pagopa.email.notification.mapper;
 
-import it.gov.pagopa.email.notification.connector.MailRequest;
+import it.gov.pagopa.email.notification.dto.smtp.MailRequest;
 import it.gov.pagopa.email.notification.dto.EmailMessageDTO;
 import org.springframework.stereotype.Component;
 
