@@ -85,7 +85,39 @@ class NotificationServiceImplTest {
     }
 
     @Test
-    void whenTemplateNameProvidedForEmailMessageDTO_thenProcessGeneralEmail() throws TemplateException, IOException {
+    void whenTemplateNameProvidedForEmailMessageDTO_thenProcessGeneralEmail_withoutSenderEmail() throws TemplateException, IOException {
+        TaskHandler taskHandler = new TaskHandler();
+        configTest.setDirectoryForTemplateLoading(new File("src/test/resources/templates"));
+        configTest.setObjectWrapper(new DefaultObjectWrapper(Configuration.VERSION_2_3_23));
+        taskHandler.setConfiguration(configTest);
+
+        Template template;
+        try {
+            template = taskHandler.handle();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        MailRequest mailRequest = new MailRequest(SENDER_EMAIL, RECIPIENT_EMAIL, SUBJECT, CONTENT);
+        doNothing().when(sMTPConnector).sendMessage(any());
+        when(mailMessageMapper.toMessageRequest(any())).thenReturn(mailRequest);
+        when(configuration.getTemplate(anyString())).thenReturn(template);
+
+        EmailMessageDTO emailMessageDTO = new EmailMessageDTO();
+        emailMessageDTO.setSubject(SUBJECT);
+        emailMessageDTO.setContent(CONTENT);
+        emailMessageDTO.setTemplateName("test");
+        emailMessageDTO.setSenderEmail(SENDER_EMAIL);
+        notificationService.sendMessage(emailMessageDTO);
+
+        verify(sMTPConnector).sendMessage(any());
+        verify(mailMessageMapper).toMessageRequest(any());
+        assertEquals(NO_REPLY_SUBJECT_PREFIX + SUBJECT, emailMessageDTO.getSubject());
+        assertEquals(CONTENT, emailMessageDTO.getContent());
+    }
+
+    @Test
+    void whenTemplateNameProvidedForEmailMessageDTO_thenProcessGeneralEmail_withSenderEmail() throws TemplateException, IOException {
         TaskHandler taskHandler = new TaskHandler();
         configTest.setDirectoryForTemplateLoading(new File("src/test/resources/templates"));
         configTest.setObjectWrapper(new DefaultObjectWrapper(Configuration.VERSION_2_3_23));
