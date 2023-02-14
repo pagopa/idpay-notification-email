@@ -71,6 +71,7 @@ microservice-chart:
     APPLICATIONINSIGHTS_ROLE_NAME: "idpaynotificationemail"
     APPLICATIONINSIGHTS_INSTRUMENTATION_LOGGING_LEVEL: "OFF"
     APPLICATIONINSIGHTS_INSTRUMENTATION_MICROMETER_ENABLED: "false"
+    APPLICATIONINSIGHTS_PREVIEW_PROFILER_ENABLED: "false"
     ASSISTANCE_MAIL_SUBJECT_PREFIX: "[ASSISTANCE]"
     NO_REPLY_SUBJECT_PREFIX: "[NO-REPLY]"
     ASSISTANCE_MAIL: "assistenza.IDPay@pagopa.it"
@@ -87,7 +88,6 @@ microservice-chart:
   envSecret:
     MAIL_SERVER_USERNAME: mail-server-username
     MAIL_SERVER_PASSWORD: mail-server-password
-#    APPLICATIONINSIGHTS_CONNECTION_STRING: appinsights-instrumentation-key
 
   # nodeSelector: {}
 
