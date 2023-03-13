@@ -53,8 +53,8 @@ public class NotificationServiceImpl implements NotificationService {
 
     @Override
     public void sendMessage(EmailMessageDTO emailMessageDTO) {
-        log.trace("sendMessage start");
-        log.debug("sendMessage emailMessageDTO = {}", emailMessageDTO);
+        log.trace("[SEND MESSAGE] Start processing message");
+        log.debug("[SEND MESSAGE] emailMessageDTO = {}", emailMessageDTO);
 
         try {
             String htmlContent;
@@ -75,7 +75,7 @@ public class NotificationServiceImpl implements NotificationService {
             throw new MailPreparationException(e);
         }
 
-        log.trace("sendMessage end");
+        log.trace("[SEND MESSAGE] End processing message");
     }
 
     private void processGeneralEmail(EmailMessageDTO emailMessageDTO) {
