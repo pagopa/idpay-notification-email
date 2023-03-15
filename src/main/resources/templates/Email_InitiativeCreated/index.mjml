@@ -67,7 +67,7 @@
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
             <p>Ciao,</p>
-             è stata creata una nuova iniziativa su <b>IDPay</b> per <b>${institutionName}</b>. </p>
+             è stata creata una nuova iniziativa su <b>IDPay</b> per <b>${orgName}</b>. </p>
 
             <p>Per accedere e prenderne visione clicca qui: <a href="https://welfare.cstar.pagopa.it/portale-enti" style="color: #0073E6;">https://welfare.cstar.pagopa.it/portale-enti</a></p>
           </mj-text>
