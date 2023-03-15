@@ -1,6 +1,6 @@
 <mjml lang="it">
   <mj-head>
-    <mj-title>Nuova iniziativa creata</mj-title>
+    <mj-title>File rimborsi generato</mj-title>
     <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
     <mj-attributes>
       <mj-all font-family="Titillium Web, Arial" />
@@ -63,11 +63,11 @@
       <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
         <mj-column>
           <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo">
-            <h1 style="font-size:32px; line-height:40px;">Nuova iniziativa creata</h1>
+            <h1 style="font-size:32px; line-height:40px;">File rimborsi generato</h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
             <p>Ciao,</p>
-             è stata creata una nuova iniziativa su <b>IDPay</b> per <b>${orgName}</b>. </p>
+            è stato generato il file dei rimborsi <b>${fileName}</b> per l'iniziativa <b>${initiativeName}</b>. </p>
 
             <p>Per accedere e prenderne visione clicca qui: <a href="https://welfare.cstar.pagopa.it/portale-enti" style="color: #0073E6;">https://welfare.cstar.pagopa.it/portale-enti</a></p>
           </mj-text>
