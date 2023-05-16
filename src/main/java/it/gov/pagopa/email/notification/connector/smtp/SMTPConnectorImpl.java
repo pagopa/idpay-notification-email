@@ -23,7 +23,7 @@ public class SMTPConnectorImpl implements SMTPConnector {
     @SneakyThrows
     @Override
     public void sendMessage(MailRequest mailRequest) {
-        log.trace("sendMessage start");
+        log.info("[SEND MESSAGE SMTP] Start processing message");
         MimeMessage mimeMessage = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, false);
         helper.setFrom(mailRequest.getFrom());
@@ -31,6 +31,6 @@ public class SMTPConnectorImpl implements SMTPConnector {
         helper.setTo(InternetAddress.parse(mailRequest.getTo()));
         helper.setSubject(mailRequest.getSubject());
         mailSender.send(mimeMessage);
-        log.trace("sendMessage end");
+        log.info("[SEND MESSAGE SMTP] End processing message");
     }
 }

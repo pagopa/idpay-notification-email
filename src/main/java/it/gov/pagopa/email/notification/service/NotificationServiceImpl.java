@@ -53,18 +53,20 @@ public class NotificationServiceImpl implements NotificationService {
 
     @Override
     public void sendMessage(EmailMessageDTO emailMessageDTO) {
-        log.trace("sendMessage start");
-        log.debug("sendMessage emailMessageDTO = {}", emailMessageDTO);
+        log.info("[SEND MESSAGE] Start processing message");
+        log.info("[SEND MESSAGE] emailMessageDTO = {}", emailMessageDTO);
 
         try {
             String htmlContent;
             if(StringUtils.isNotBlank(emailMessageDTO.getTemplateName())) {
+                log.info("[SEND MESSAGE] Processing general mail");
                 this.processGeneralEmail(emailMessageDTO);
                 Template template = this.freemarkerConfig.getTemplate(emailMessageDTO.getTemplateName() + "\\index.html");
                 Map<String, String> placeHolderWithInternationalization = messageService.getMessages(emailMessageDTO.getTemplateValues());
                 htmlContent = FreeMarkerTemplateUtils.processTemplateIntoString(template, placeHolderWithInternationalization);
             }
             else{
+                log.info("[SEND MESSAGE] Processing to assistance");
                 this.processToAssistance(emailMessageDTO);
                 htmlContent = emailMessageDTO.getContent();
             }
@@ -75,7 +77,7 @@ public class NotificationServiceImpl implements NotificationService {
             throw new MailPreparationException(e);
         }
 
-        log.trace("sendMessage end");
+        log.info("[SEND MESSAGE] End processing message");
     }
 
     private void processGeneralEmail(EmailMessageDTO emailMessageDTO) {

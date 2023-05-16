@@ -49,6 +49,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.codehaus.janino</groupId>
+            <artifactId>janino</artifactId>
+            <version>3.1.8</version>
+        </dependency>
 
         <!--OpenAPI SpringDOC-->
         <dependency>
