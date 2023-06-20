@@ -21,6 +21,7 @@ spring:
     password: ${MAIL_SERVER_PASSWORD:}
     properties.mail.smtp.auth: ${MAIL_SERVER_SMTP_AUTH:true}
     properties.mail.smtp.starttls.enable: ${MAIL_SERVER_SMTP_TLS_ENABLE:true}
+    properties.mail.smtp.starttls.required: ${MAIL_SERVER_SMTP_TLS_REQUIRED:true}
     protocol: ${MAIL_SERVER_PROTOCOL:smtp}
     properties.mail.test-connection: ${MAIL_TEST_CONNECTION:false}
 

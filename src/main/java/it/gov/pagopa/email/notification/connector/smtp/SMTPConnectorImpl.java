@@ -15,7 +15,7 @@ import javax.mail.internet.MimeMessage;
 @Service
 public class SMTPConnectorImpl implements SMTPConnector {
     @Autowired
-    private final JavaMailSender mailSender;
+    private JavaMailSender mailSender;
 
     public SMTPConnectorImpl(JavaMailSender mailSender) {
         this.mailSender = mailSender;
