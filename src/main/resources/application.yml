@@ -22,7 +22,7 @@ spring:
     properties.mail.smtp.auth: ${MAIL_SERVER_SMTP_AUTH:true}
     properties.mail.smtp.starttls.enable: ${MAIL_SERVER_SMTP_TLS_ENABLE:true}
     protocol: ${MAIL_SERVER_PROTOCOL:smtp}
-    test-connection: ${MAIL_TEST_CONNECTION:false}
+    properties.mail.test-connection: ${MAIL_TEST_CONNECTION:false}
 
 logging:
   level:
