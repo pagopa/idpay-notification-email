@@ -1,7 +1,4 @@
 spring:
-  application:
-    name: "@project.artifactId@"
-    version: "@project.version@"
   freemarker:
     enabled: true
     cache: true
