@@ -3,6 +3,7 @@ package it.gov.pagopa.email.notification.connector.smtp;
 import it.gov.pagopa.email.notification.dto.smtp.MailRequest;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import javax.mail.internet.MimeMessage;
 @Slf4j
 @Service
 public class SMTPConnectorImpl implements SMTPConnector {
-
+    @Autowired
     private final JavaMailSender mailSender;
 
     public SMTPConnectorImpl(JavaMailSender mailSender) {

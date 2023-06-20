@@ -17,6 +17,8 @@ spring:
   mail:
     host: ${MAIL_SERVER_HOST:}
     port: ${MAIL_SERVER_PORT:}
+    username: ${MAIL_SERVER_USERNAME:}
+    password: ${MAIL_SERVER_PASSWORD:}
     properties.mail.smtp.auth: ${MAIL_SERVER_SMTP_AUTH:true}
     properties.mail.smtp.starttls.enable: ${MAIL_SERVER_SMTP_TLS_ENABLE:true}
     protocol: ${MAIL_SERVER_PROTOCOL:smtp}
