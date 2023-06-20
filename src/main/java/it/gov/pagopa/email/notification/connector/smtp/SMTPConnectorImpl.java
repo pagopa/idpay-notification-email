@@ -3,8 +3,8 @@ package it.gov.pagopa.email.notification.connector.smtp;
 import it.gov.pagopa.email.notification.dto.smtp.MailRequest;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
@@ -13,11 +13,11 @@ import javax.mail.internet.MimeMessage;
 
 @Slf4j
 @Service
+@ConditionalOnProperty(prefix = "spring.mail", value = "test-connection")
 public class SMTPConnectorImpl implements SMTPConnector {
-    @Autowired
-    private JavaMailSender mailSender;
+    private final JavaMailSenderImpl mailSender;
 
-    public SMTPConnectorImpl(JavaMailSender mailSender) {
+    public SMTPConnectorImpl(JavaMailSenderImpl mailSender) {
         this.mailSender = mailSender;
     }
 
