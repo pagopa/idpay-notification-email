@@ -3,7 +3,6 @@ package it.gov.pagopa.email.notification.service;
 import freemarker.template.Configuration;
 import freemarker.template.DefaultObjectWrapper;
 import freemarker.template.Template;
-import freemarker.template.TemplateException;
 import it.gov.pagopa.email.notification.dto.smtp.MailRequest;
 import it.gov.pagopa.email.notification.dto.EmailMessageDTO;
 import it.gov.pagopa.email.notification.freemarkerTaskHandler.TaskHandler;
@@ -160,8 +159,9 @@ class NotificationServiceImplTest {
     void whenNotificationServiceRaiseException_thenGetException() {
         when(mailMessageMapper.toMessageRequest(any()))
                 .thenThrow(new MailPreparationException("sendMessage start"));
+        EmailMessageDTO emailMessageDTO = new EmailMessageDTO();
 
-        assertThrows(MailPreparationException.class, () -> notificationService.sendMessage(new EmailMessageDTO()));
+        assertThrows(MailPreparationException.class, () -> notificationService.sendMessage(emailMessageDTO));
         verify(mailMessageMapper).toMessageRequest(any());
     }
 }
