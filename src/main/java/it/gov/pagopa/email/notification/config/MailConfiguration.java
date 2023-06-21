@@ -1,4 +1,4 @@
-package it.gov.pagopa.email.notification.config.email;
+package it.gov.pagopa.email.notification.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +18,6 @@ public class MailConfiguration {
     private final String protocol;
     private final String smtpAuth;
     private final String smtpStartTLS;
-    private final String mailDebug;
     private final String testConnection;
 
     public MailConfiguration(@Value("${spring.mail.host}") String host,
@@ -28,7 +27,6 @@ public class MailConfiguration {
                              @Value("${spring.mail.protocol}") String protocol,
                              @Value("${spring.mail.properties.mail.smtp.auth}") String smtpAuth,
                              @Value("${spring.mail.properties.mail.smtp.starttls.enable}") String smtpStartTLS,
-                             @Value("${spring.mail.properties.mail.debug}") String mailDebug,
                              @Value("${spring.mail.test-connection}") String testConnection){
         this.host = host;
         this.port = port;
@@ -37,7 +35,6 @@ public class MailConfiguration {
         this.protocol = protocol;
         this.smtpAuth = smtpAuth;
         this.smtpStartTLS = smtpStartTLS;
-        this.mailDebug = mailDebug;
         this.testConnection = testConnection;
     }
 
@@ -53,7 +50,6 @@ public class MailConfiguration {
         Properties props = mailSender.getJavaMailProperties();
         props.put("mail.smtp.auth", this.smtpAuth);
         props.put("mail.smtp.starttls.enable", this.smtpStartTLS);
-        props.put("mail.debug", this.mailDebug);
         props.put("mail.test-connection", this.testConnection);
         return mailSender;
     }
