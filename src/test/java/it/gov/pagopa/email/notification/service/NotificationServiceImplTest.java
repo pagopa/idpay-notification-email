@@ -3,9 +3,7 @@ package it.gov.pagopa.email.notification.service;
 import freemarker.template.Configuration;
 import freemarker.template.DefaultObjectWrapper;
 import freemarker.template.Template;
-import freemarker.template.TemplateException;
 import it.gov.pagopa.email.notification.dto.smtp.MailRequest;
-import it.gov.pagopa.email.notification.connector.smtp.SMTPConnector;
 import it.gov.pagopa.email.notification.dto.EmailMessageDTO;
 import it.gov.pagopa.email.notification.freemarkerTaskHandler.TaskHandler;
 import it.gov.pagopa.email.notification.mapper.MailMessageMapper;
@@ -14,9 +12,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.mail.MailPreparationException;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
+import javax.mail.Session;
+import javax.mail.internet.MimeMessage;
 import java.io.File;
 import java.io.IOException;
 
@@ -58,7 +59,7 @@ class NotificationServiceImplTest {
     private MessageService messageService;
 
     @MockBean
-    private SMTPConnector sMTPConnector;
+    private JavaMailSender javaMailSender;
 
     private final Configuration configTest = new Configuration(Configuration.VERSION_2_3_23);
 
@@ -68,8 +69,10 @@ class NotificationServiceImplTest {
     @Test
     void whenNoTemplateNameProvidedForEmailMessageDTO_thenProcessAssistance() {
         MailRequest mailRequest = new MailRequest(SENDER_EMAIL, RECIPIENT_EMAIL, SUBJECT, CONTENT);
-        doNothing().when(sMTPConnector).sendMessage((MailRequest) any());
-        when(mailMessageMapper.toMessageRequest((EmailMessageDTO) any())).thenReturn(mailRequest);
+        when(mailMessageMapper.toMessageRequest(any())).thenReturn(mailRequest);
+
+        doNothing().when(javaMailSender).send((MimeMessage) any());
+        when(javaMailSender.createMimeMessage()).thenReturn(new MimeMessage((Session) null));
 
         EmailMessageDTO emailMessageDTO = new EmailMessageDTO();
         emailMessageDTO.setSubject(SUBJECT);
@@ -77,15 +80,14 @@ class NotificationServiceImplTest {
         emailMessageDTO.setSenderEmail(SENDER_EMAIL);
         notificationService.sendMessage(emailMessageDTO);
 
-        verify(sMTPConnector).sendMessage((MailRequest) any());
-        verify(mailMessageMapper).toMessageRequest((EmailMessageDTO) any());
+        verify(mailMessageMapper).toMessageRequest(any());
         assertEquals(ASSISTANCE_SUBJECT_PREFIX + SUBJECT, emailMessageDTO.getSubject());
         assertEquals(ASSISTANCE_RECIPIENT_MAIL_ADDRESS, emailMessageDTO.getRecipientEmail());
         assertEquals(CONTENT, emailMessageDTO.getContent());
     }
 
     @Test
-    void whenTemplateNameProvidedForEmailMessageDTO_thenProcessGeneralEmail_withoutSenderEmail() throws TemplateException, IOException {
+    void whenTemplateNameProvidedForEmailMessageDTO_thenProcessGeneralEmail_withoutSenderEmail() throws IOException {
         TaskHandler taskHandler = new TaskHandler();
         configTest.setDirectoryForTemplateLoading(new File("src/test/resources/templates"));
         configTest.setObjectWrapper(new DefaultObjectWrapper(Configuration.VERSION_2_3_23));
@@ -99,9 +101,11 @@ class NotificationServiceImplTest {
         }
 
         MailRequest mailRequest = new MailRequest(SENDER_EMAIL, RECIPIENT_EMAIL, SUBJECT, CONTENT);
-        doNothing().when(sMTPConnector).sendMessage(any());
         when(mailMessageMapper.toMessageRequest(any())).thenReturn(mailRequest);
         when(configuration.getTemplate(anyString())).thenReturn(template);
+
+        doNothing().when(javaMailSender).send((MimeMessage) any());
+        when(javaMailSender.createMimeMessage()).thenReturn(new MimeMessage((Session) null));
 
         EmailMessageDTO emailMessageDTO = new EmailMessageDTO();
         emailMessageDTO.setSubject(SUBJECT);
@@ -110,14 +114,13 @@ class NotificationServiceImplTest {
         emailMessageDTO.setSenderEmail(SENDER_EMAIL);
         notificationService.sendMessage(emailMessageDTO);
 
-        verify(sMTPConnector).sendMessage(any());
         verify(mailMessageMapper).toMessageRequest(any());
         assertEquals(NO_REPLY_SUBJECT_PREFIX + SUBJECT, emailMessageDTO.getSubject());
         assertEquals(CONTENT, emailMessageDTO.getContent());
     }
 
     @Test
-    void whenTemplateNameProvidedForEmailMessageDTO_thenProcessGeneralEmail_withSenderEmail() throws TemplateException, IOException {
+    void whenTemplateNameProvidedForEmailMessageDTO_thenProcessGeneralEmail_withSenderEmail() throws IOException {
         TaskHandler taskHandler = new TaskHandler();
         configTest.setDirectoryForTemplateLoading(new File("src/test/resources/templates"));
         configTest.setObjectWrapper(new DefaultObjectWrapper(Configuration.VERSION_2_3_23));
@@ -131,9 +134,11 @@ class NotificationServiceImplTest {
         }
 
         MailRequest mailRequest = new MailRequest(SENDER_EMAIL, RECIPIENT_EMAIL, SUBJECT, CONTENT);
-        doNothing().when(sMTPConnector).sendMessage(any());
         when(mailMessageMapper.toMessageRequest(any())).thenReturn(mailRequest);
         when(configuration.getTemplate(anyString())).thenReturn(template);
+
+        doNothing().when(javaMailSender).send((MimeMessage) any());
+        when(javaMailSender.createMimeMessage()).thenReturn(new MimeMessage((Session) null));
 
         EmailMessageDTO emailMessageDTO = new EmailMessageDTO();
         emailMessageDTO.setSubject(SUBJECT);
@@ -141,7 +146,6 @@ class NotificationServiceImplTest {
         emailMessageDTO.setTemplateName("test");
         notificationService.sendMessage(emailMessageDTO);
 
-        verify(sMTPConnector).sendMessage(any());
         verify(mailMessageMapper).toMessageRequest(any());
         assertEquals(NO_REPLY_SENDER_MAIL_ADDRESS, emailMessageDTO.getSenderEmail());
         assertEquals(NO_REPLY_SUBJECT_PREFIX + SUBJECT, emailMessageDTO.getSubject());
@@ -153,12 +157,12 @@ class NotificationServiceImplTest {
      */
     @Test
     void whenNotificationServiceRaiseException_thenGetException() {
-        doNothing().when(sMTPConnector).sendMessage((MailRequest) any());
-        when(mailMessageMapper.toMessageRequest((EmailMessageDTO) any()))
+        when(mailMessageMapper.toMessageRequest(any()))
                 .thenThrow(new MailPreparationException("sendMessage start"));
+        EmailMessageDTO emailMessageDTO = new EmailMessageDTO();
 
-        assertThrows(MailPreparationException.class, () -> notificationService.sendMessage(new EmailMessageDTO()));
-        verify(mailMessageMapper).toMessageRequest((EmailMessageDTO) any());
+        assertThrows(MailPreparationException.class, () -> notificationService.sendMessage(emailMessageDTO));
+        verify(mailMessageMapper).toMessageRequest(any());
     }
 }
 

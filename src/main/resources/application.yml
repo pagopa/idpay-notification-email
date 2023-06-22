@@ -1,4 +1,7 @@
 spring:
+  application:
+    name: "@project.artifactId@"
+    version: "@project.version@"
   freemarker:
     enabled: true
     cache: true
@@ -18,6 +21,7 @@ spring:
     password: ${MAIL_SERVER_PASSWORD:}
     properties.mail.smtp.auth: ${MAIL_SERVER_SMTP_AUTH:true}
     properties.mail.smtp.starttls.enable: ${MAIL_SERVER_SMTP_TLS_ENABLE:true}
+    properties.mail.debug: ${MAIL_SERVER_DEBUG:true}
     protocol: ${MAIL_SERVER_PROTOCOL:smtp}
     test-connection: ${MAIL_TEST_CONNECTION:false}
 
