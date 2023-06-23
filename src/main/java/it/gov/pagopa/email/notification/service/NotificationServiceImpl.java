@@ -99,7 +99,7 @@ public class NotificationServiceImpl implements NotificationService {
     public void sendMessage(MailRequest mailRequest) {
         log.info("[SEND MESSAGE SMTP] Start processing message");
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
-        MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, false);
+        MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, false,  "UTF-8");
         helper.setFrom(mailRequest.getFrom());
         helper.setText(mailRequest.getContent(), true);
         helper.setTo(InternetAddress.parse(mailRequest.getTo()));
