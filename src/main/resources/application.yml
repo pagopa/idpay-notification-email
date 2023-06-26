@@ -2,6 +2,7 @@ spring:
   application:
     name: "@project.artifactId@"
     version: "@project.version@"
+  jmx.enabled: true
   freemarker:
     enabled: true
     cache: true
@@ -12,8 +13,18 @@ spring:
 
   data:
     mongodb:
-      uri: ${MONGODB_URI}
-      database: ${MONGODB_DBNAME}
+      uri: ${MONGODB_URI:mongodb://localhost:27017}
+      database: ${MONGODB_DBNAME:idpay}
+      # custom configured properties
+      config:
+        connectionPool:
+          maxSize: ${MONGODB_CONNECTIONPOOL_MAX_SIZE:100}
+          minSize: ${MONGODB_CONNECTIONPOOL_MIN_SIZE:0}
+          maxWaitTimeMS: ${MONGODB_CONNECTIONPOOL_MAX_WAIT_MS:120000}
+          maxConnectionLifeTimeMS: ${MONGODB_CONNECTIONPOOL_MAX_CONNECTION_LIFE_MS:0}
+          maxConnectionIdleTimeMS: ${MONGODB_CONNECTIONPOOL_MAX_CONNECTION_IDLE_MS:120000}
+          maxConnecting: ${MONGODB_CONNECTIONPOOL_MAX_CONNECTING:2}
+
   mail:
     host: ${MAIL_SERVER_HOST:}
     port: ${MAIL_SERVER_PORT:}

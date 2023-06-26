@@ -109,3 +109,6 @@ Desktop.ini
 
 # Application resources
 /src/main/resources/application-local.yml
+
+/helm/charts/*
+/src/test/resources/secrets/*
