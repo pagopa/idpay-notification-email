@@ -87,12 +87,15 @@ public class NotificationServiceImpl implements NotificationService {
     private void processGeneralEmail(EmailMessageDTO emailMessageDTO) {
         if(emailMessageDTO.getSenderEmail() == null)
             emailMessageDTO.setSenderEmail(noReplySenderMailAddress);
-        emailMessageDTO.setSubject(String.format("%s", noReplySubjectPrefix)+emailMessageDTO.getSubject());
+        emailMessageDTO.setSubject(String.format("%s", noReplySubjectPrefix)
+                + StringUtils.defaultIfBlank(emailMessageDTO.getSubject(), StringUtils.EMPTY));
     }
 
     private void processToAssistance(EmailMessageDTO emailMessageDTO) {
         emailMessageDTO.setRecipientEmail(assistanceRecipientMailAddress);
-        emailMessageDTO.setSubject(String.format("%s", assistanceSubjectPrefix)+emailMessageDTO.getSubject()); //FIXME Check UseCase for Subject 'null' to avoid concatenation like "PREFIXnull"
+
+        emailMessageDTO.setSubject(String.format("%s", assistanceSubjectPrefix)
+                + StringUtils.defaultIfBlank(emailMessageDTO.getSubject(), StringUtils.EMPTY));
     }
 
     @SneakyThrows
