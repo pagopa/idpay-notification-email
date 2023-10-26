@@ -2,6 +2,7 @@ spring:
   application:
     name: "@project.artifactId@"
     version: "@project.version@"
+  jmx.enabled: true
   freemarker:
     enabled: true
     cache: true
@@ -29,11 +30,17 @@ logging:
   level:
     root: ${LOG_LEVEL_ROOT:INFO}
     it.gov.pagopa: ${LOG_LEVEL_PAGOPA:INFO}
-    it.gov.pagopa.notification.email: ${LOG_LEVEL_INITIATIVE_NOTIFICATION_EMAIL:INFO}
+    it.gov.pagopa.notification.email: ${LOG_LEVEL_NOTIFICATION_EMAIL:INFO}
+    org.springframework.integration: ${LOG_LEVEL_SPRING_INTEGRATION:INFO}
+    org.springframework.security: ${LOG_LEVEL_SPRING_SECURITY:INFO}
+    org.springframework.ws: ${LOG_LEVEL_SPRING_WS:INFO}
     org.springframework.cloud: ${LOG_LEVEL_SPRING_CLOUD:WARN}
     org.springframework.data: ${LOG_LEVEL_SPRING_DATA:INFO}
+    org.springframework.hateoas: ${LOG_LEVEL_SPRING_HATEOAS:INFO}
     org.springframework.boot: ${LOG_LEVEL_SPRING_BOOT:INFO}
-    org.springframework.web: ${LOG_LEVEL_SPRING_WEB:INFO}
+    org.springframework.boot.availability: ${LOG_LEVEL_SPRING_BOOT_AVAILABILITY:DEBUG}
+    org.springframework.kafka: ${LOG_LEVEL_SPRING_KAFKA:INFO}
+    org.springframework.batch: ${LOG_LEVEL_SPRING_BATCH:INFO}
     io.swagger: ${LOG_LEVEL_IO_SWAGGER:WARN}
     javax.persistence: ${LOG_LEVEL_JAVAX_PERSISTENCE:INFO}
     org.hibernate: ${LOG_LEVEL_ORG_HIBERNATE:INFO}
@@ -48,3 +55,17 @@ app:
       no-reply:
         sender: ${NO_REPLY_MAIL:noreply_idpay@pagopa.it} #FIXME
         subject-prefix: ${NO_REPLY_SUBJECT_PREFIX:${ENV_TARGET:DEV} - }
+
+management:
+  endpoint:
+    health:
+      probes.enabled: true
+      group:
+        readiness.include: "*"
+        liveness.include: livenessState,diskSpace,ping
+      logging.slow-indicator-threshold: ${HEALTH_ACTUATOR_LOGGER_TIMEOUT_DURATION:PT1S}
+  endpoints:
+    jmx:
+      exposure.include: "*"
+    web:
+      exposure.include: info, health

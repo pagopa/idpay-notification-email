@@ -38,13 +38,6 @@ public class FreemarkerConfiguration implements WebMvcConfigurer {
         registry.addInterceptor(localeChangeInterceptor());
     }
 
-//    @Override
-//    public void addInterceptors(final InterceptorRegistry registry) {
-//        final LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
-//        localeChangeInterceptor.setParamName("lang");
-//        registry.addInterceptor(localeChangeInterceptor);
-//    }
-
     @Bean
     public LocaleResolver localeResolver() {
         SessionLocaleResolver slr = new SessionLocaleResolver();
