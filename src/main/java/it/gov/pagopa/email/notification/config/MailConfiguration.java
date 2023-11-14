@@ -50,6 +50,7 @@ public class MailConfiguration {
         Properties props = mailSender.getJavaMailProperties();
         props.put("mail.smtp.auth", this.smtpAuth);
         props.put("mail.smtp.starttls.enable", this.smtpStartTLS);
+        props.put("mail.smtp.starttls.required", this.smtpStartTLS);
         props.put("mail.test-connection", this.testConnection);
         return mailSender;
     }
