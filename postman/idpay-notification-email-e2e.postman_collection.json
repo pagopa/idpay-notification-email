@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "d9f30dbd-ef06-4f1f-893b-dce4291794ea",
+		"_postman_id": "482f05c9-df34-471c-ac32-4a5ee189b54c",
 		"name": "idpay-notification-email-e2e",
 		"description": "Description TBD",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "3194665"
+		"_exporter_id": "15747968"
 	},
 	"item": [
 		{
@@ -55,7 +55,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"aud\" : \"idpay.welfare.pagopa.it\",\r\n    \"uid\" : \"9abcbe25-99f4-40f9-a03b-afed9cd9bb8a\",\r\n    \"name\" : \"Mario\",\r\n    \"familyName\" : \"Rossi\",\r\n    \"email\" : \"test@token.it\",\r\n    \"orgId\" : \"2f63a151-da4e-4e1e-acf9-adecc0c4d727\",    \r\n    \"orgVAT\" : \"11122233344\",\r\n    \"orgPartyRole\" : \"ADMIN\",\r\n    \"orgRole\" : \"admin\"\r\n}",
+							"raw": "{\r\n    \"aud\" : \"idpay.welfare.pagopa.it\",\r\n    \"uid\" : \"c0a46b47-4bf4-4acf-a0d6-4a9a79df37d5\",\r\n    \"name\" : \"Mario\",\r\n    \"familyName\" : \"Rossi\",\r\n    \"email\" : \"test@token.it\",\r\n    \"orgId\" : \"2f63a151-da4e-4e1e-acf9-adecc0c4d727\",    \r\n    \"orgVAT\" : \"11122233344\",\r\n    \"orgPartyRole\" : \"ADMIN\",\r\n    \"orgRole\" : \"admin\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
