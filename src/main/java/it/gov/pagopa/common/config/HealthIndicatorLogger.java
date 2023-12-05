@@ -13,8 +13,12 @@ import java.util.List;
 @Service
 public class HealthIndicatorLogger implements HealthIndicator {
 
-    @Autowired
-    private List<HealthIndicator> healthIndicatorList;
+    private final List<HealthIndicator> healthIndicatorList;
+
+     @Autowired
+    public HealthIndicatorLogger(List<HealthIndicator> healthIndicatorList) {
+        this.healthIndicatorList = healthIndicatorList;
+    }
 
     @Override
     public Health health() {
