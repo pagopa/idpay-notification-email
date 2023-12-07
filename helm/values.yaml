@@ -84,7 +84,7 @@ microservice-chart:
     ASSISTANCE_MAIL: "assistenza.IDPay@pagopa.it"
     NO_REPLY_MAIL: "noreply_idpay@pagopa.it"
 
-  envConfigMapExternals:
+  externalConfigMapValues:
     idpay-common:
       TZ: TZ
       JAVA_TOOL_OPTIONS: JAVA_TOOL_OPTIONS
@@ -96,6 +96,12 @@ microservice-chart:
     MAIL_SERVER_USERNAME: mail-server-username
     MAIL_SERVER_PASSWORD: mail-server-password
 
+  externalConfigMapFiles:
+    create: true
+    configMaps:
+      - name: appinsights-config
+        key: applicationinsights.json
+        
   # nodeSelector: {}
 
   # tolerations: []
