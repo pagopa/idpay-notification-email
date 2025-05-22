@@ -12,7 +12,6 @@ import java.util.List;
 @Service
 public class HealthIndicatorLogger implements HealthIndicator {
 
-    
     private final List<HealthIndicator> healthIndicatorList;
 
     public HealthIndicatorLogger(List<HealthIndicator> healthIndicatorList) {
