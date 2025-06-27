@@ -2,22 +2,18 @@ package it.gov.pagopa.email.notification.service;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
+import it.gov.pagopa.email.notification.connector.aws.AwsSesConnector;
 import it.gov.pagopa.email.notification.dto.EmailMessageDTO;
 import it.gov.pagopa.email.notification.dto.smtp.MailRequest;
 import it.gov.pagopa.email.notification.mapper.MailMessageMapper;
-import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.MailPreparationException;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 
-import jakarta.mail.internet.InternetAddress;
-import jakarta.mail.internet.MimeMessage;
 import java.util.Map;
 
 @Slf4j
@@ -25,7 +21,6 @@ import java.util.Map;
 public class NotificationServiceImpl implements NotificationService {
 
     private final Configuration freemarkerConfig;
-    private final JavaMailSender javaMailSender;
     private final MailMessageMapper mailMessageMapper;
     private final MessageService messageService;
     private final String assistanceRecipientMailAddress;
@@ -33,26 +28,29 @@ public class NotificationServiceImpl implements NotificationService {
     private final String noReplySenderMailAddress;
     private final String noReplySubjectPrefix;
 
+    private final AwsSesConnector awsSesConnector;
+
+
     @Autowired
     NotificationServiceImpl(
             Configuration freemarkerConfig,
-            JavaMailSender javaMailSender,
             MailMessageMapper mailMessageMapper,
             MessageService messageService,
             @Value("${app.email.notification.assistance.recipient}") String assistanceRecipientMailAddress,
             @Value("${app.email.notification.assistance.subject-prefix}") String assistanceSubjectPrefix,
             @Value("${app.email.notification.no-reply.sender}") String noReplySenderMailAddress,
-            @Value("${app.email.notification.no-reply.subject-prefix}") String noReplySubjectPrefix
+            @Value("${app.email.notification.no-reply.subject-prefix}") String noReplySubjectPrefix,
+            AwsSesConnector awsSesConnector
 
     ) {
         this.freemarkerConfig = freemarkerConfig;
-        this.javaMailSender = javaMailSender;
         this.mailMessageMapper = mailMessageMapper;
         this.messageService = messageService;
         this.assistanceRecipientMailAddress = assistanceRecipientMailAddress;
         this.assistanceSubjectPrefix = assistanceSubjectPrefix;
         this.noReplySenderMailAddress = noReplySenderMailAddress;
         this.noReplySubjectPrefix = noReplySubjectPrefix;
+        this.awsSesConnector = awsSesConnector;
     }
 
     @Override
@@ -76,7 +74,7 @@ public class NotificationServiceImpl implements NotificationService {
             }
             emailMessageDTO.setContent(htmlContent);
             MailRequest mailRequest = this.mailMessageMapper.toMessageRequest(emailMessageDTO);
-            this.sendMessage(mailRequest);
+            awsSesConnector.sendEmail(mailRequest);
         } catch (Exception e) {
             throw new MailPreparationException(e);
         }
@@ -96,19 +94,6 @@ public class NotificationServiceImpl implements NotificationService {
 
         emailMessageDTO.setSubject(String.format("%s", assistanceSubjectPrefix)
                 + StringUtils.defaultIfBlank(emailMessageDTO.getSubject(), StringUtils.EMPTY));
-    }
-
-    @SneakyThrows
-    public void sendMessage(MailRequest mailRequest) {
-        log.info("[SEND MESSAGE SMTP] Start processing message");
-        MimeMessage mimeMessage = javaMailSender.createMimeMessage();
-        MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, false,  "UTF-8");
-        helper.setFrom(mailRequest.getFrom());
-        helper.setText(mailRequest.getContent(), true);
-        helper.setTo(InternetAddress.parse(mailRequest.getTo()));
-        helper.setSubject(mailRequest.getSubject());
-        javaMailSender.send(mimeMessage);
-        log.info("[SEND MESSAGE SMTP] End processing message");
     }
 
 }
