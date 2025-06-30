@@ -76,6 +76,7 @@ public class NotificationServiceImpl implements NotificationService {
             MailRequest mailRequest = this.mailMessageMapper.toMessageRequest(emailMessageDTO);
             awsSesConnector.sendEmail(mailRequest);
         } catch (Exception e) {
+            log.error("Error while sending email: {}", e.getMessage());
             throw new MailPreparationException(e);
         }
 
