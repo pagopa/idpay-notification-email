@@ -9,6 +9,7 @@ import software.amazon.awssdk.services.ses.model.*;
 @Slf4j
 @Service
 public class AwsSesClient implements AwsSesConnector {
+    private static final String CHARSET = "UTF-8";
 
     private final SesClient sesClient;
 
@@ -23,7 +24,7 @@ public class AwsSesClient implements AwsSesConnector {
                 .destination(Destination.builder().toAddresses(mailRequest.getTo()).build())
                 .message(Message.builder()
                         .subject(Content.builder().data(mailRequest.getSubject()).build())
-                        .body(Body.builder().text(Content.builder().data(mailRequest.getContent()).build()).build())
+                        .body(Body.builder().html(Content.builder().data(mailRequest.getContent()).charset(CHARSET).build()).build())
                         .build())
                 .build();
         SendEmailResponse response = sesClient.sendEmail(request);
