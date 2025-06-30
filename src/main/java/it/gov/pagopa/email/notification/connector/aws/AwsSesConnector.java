@@ -4,6 +4,6 @@ import it.gov.pagopa.email.notification.dto.smtp.MailRequest;
 
 public interface AwsSesConnector {
 
-    String sendEmail(MailRequest mailRequest);
+    void sendEmail(MailRequest mailRequest);
 
 }

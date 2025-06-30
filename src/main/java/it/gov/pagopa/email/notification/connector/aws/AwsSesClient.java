@@ -3,7 +3,6 @@ package it.gov.pagopa.email.notification.connector.aws;
 import it.gov.pagopa.email.notification.dto.smtp.MailRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.services.ses.SesClient;
 import software.amazon.awssdk.services.ses.model.*;
@@ -15,7 +14,7 @@ public class AwsSesClient implements AwsSesConnector {
     @Autowired
     private SesClient sesClient;
 
-    public String sendEmail(MailRequest mailRequest) {
+    public void sendEmail(MailRequest mailRequest) {
 
         SendEmailRequest request = SendEmailRequest.builder()
                 .source(mailRequest.getFrom())
@@ -26,6 +25,6 @@ public class AwsSesClient implements AwsSesConnector {
                         .build())
                 .build();
         SendEmailResponse response = sesClient.sendEmail(request);
-        return "Email sent! Message ID: " + response.messageId();
+        log.info("Email sent! Message ID: {}", response.messageId());
     }
 }
