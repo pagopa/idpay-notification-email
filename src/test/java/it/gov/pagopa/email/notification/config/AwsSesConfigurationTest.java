@@ -15,14 +15,14 @@ import software.amazon.awssdk.services.ses.SesClient;
                 "app.aws.region=LOCATION"
         })
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {AwsSesConfig.class})
-class AwsSesConfigTest {
+@ContextConfiguration(classes = {AwsSesConfiguration.class})
+class AwsSesConfigurationTest {
     @Autowired
-    private AwsSesConfig awsSesConfig;
+    private AwsSesConfiguration awsSesConfiguration;
 
     @Test
     void sesClientTest(){
-        SesClient client = awsSesConfig.sesClient();
+        SesClient client = awsSesConfiguration.sesClient();
         Assertions.assertNotNull(client);
     }
 }
