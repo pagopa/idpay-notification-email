@@ -1,0 +1,95 @@
+<mjml lang="it">
+  <mj-head>
+    <mj-title>Errore durante l'elaborazione dei dati</mj-title>
+    <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
+    <mj-attributes>
+      <mj-all font-family="Titillium Web, Arial" />
+    </mj-attributes>
+    <mj-raw>
+      <style type="text/css">
+        h1 {
+          font-size: 32px;
+          line-height: 40px;
+          color: #17324D;
+          font-weight: 700;
+          text-align: left;
+        }
+
+        h4 {
+          margin-bottom: 0px;
+        }
+
+        p {
+          margin-top: 0px;
+        }
+      </style>
+      <style type="text/css">
+        @media (min-width:600px) {
+          body {
+            background-color: #E6E9F2;
+          }
+
+          .mobile {
+            display: none;
+          }
+
+          .desktop {
+            display: block;
+          }
+        }
+      </style>
+    </mj-raw>
+  </mj-head>
+  <mj-body>
+    <mj-wrapper>
+      <!-- vuoto sopra
+      <mj-section>
+        <mj-column>
+          <mj-spacer height="32px" />
+        </mj-column>
+      </mj-section>-->
+      <!-- logo pagoPA -->
+      <mj-section background-color="#ffffff" border-top="solid 8px #80C5D3" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
+        <mj-column>
+          <mj-spacer height="48px" css-class="spaziatura" />
+          <mj-text>
+            <mj-raw>
+              <img src="https://selfcare.pagopa.it/assets/logo_pagopacorp.png" alt="Logo di PagoPA S.p.A." class="logopagopa" width="116" align="left" style="display:block;width:116px;" />
+            </mj-raw>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- Titolo e sottotitolo -->
+      <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
+        <mj-column>
+          <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo">
+            <h1 style="font-size:32px; line-height:40px;">Elaborazione parziale dei prodotti</h1>
+          </mj-text>
+          <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
+            <p>Gentile utente,</p>
+             <p>Abbiamo elaborato il file ${productFileName}, ma alcuni prodotti non sono stati caricati correttamente.</p>
+
+            <p>Ti inviato ad <a href="https://selfcare.pagopa.it/regsitro-dei-beni" style="color: #0073E6;">accedere al portale</a> per verificare l'esito e consultare il report dedicato.</p>
+          </mj-text>
+          <mj-text font-size="16px" line-height="24px" color="#17324D">
+            <p>A presto,<br aria-hidden="true">il team di Registro dei beni</p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-spacer height="8px" css-class="spaziatura" />
+          <mj-text>
+            <p style="color: #17324D">Ricevi questo messaggio perché hai un’utenza attiva come operatore su Registro dei beni dell'Area Riservata.</p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- vuoto sotto -->
+      <mj-section>
+        <mj-column>
+          <mj-spacer height="24px" css-class="spaziatura" />
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>
