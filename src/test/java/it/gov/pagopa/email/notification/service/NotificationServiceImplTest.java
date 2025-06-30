@@ -3,8 +3,9 @@ package it.gov.pagopa.email.notification.service;
 import freemarker.template.Configuration;
 import freemarker.template.DefaultObjectWrapper;
 import freemarker.template.Template;
-import it.gov.pagopa.email.notification.dto.smtp.MailRequest;
+import it.gov.pagopa.email.notification.connector.aws.AwsSesConnector;
 import it.gov.pagopa.email.notification.dto.EmailMessageDTO;
+import it.gov.pagopa.email.notification.dto.smtp.MailRequest;
 import it.gov.pagopa.email.notification.freemarkerTaskHandler.TaskHandler;
 import it.gov.pagopa.email.notification.mapper.MailMessageMapper;
 import org.junit.jupiter.api.Test;
@@ -12,12 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.mail.MailPreparationException;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-import jakarta.mail.Session;
-import jakarta.mail.internet.MimeMessage;
 import java.io.File;
 import java.io.IOException;
 
@@ -59,7 +57,7 @@ class NotificationServiceImplTest {
     private MessageService messageService;
 
     @MockBean
-    private JavaMailSender javaMailSender;
+    private AwsSesConnector awsSesConnector;
 
     private final Configuration configTest = new Configuration(Configuration.VERSION_2_3_23);
 
@@ -71,8 +69,7 @@ class NotificationServiceImplTest {
         MailRequest mailRequest = new MailRequest(SENDER_EMAIL, RECIPIENT_EMAIL, SUBJECT, CONTENT);
         when(mailMessageMapper.toMessageRequest(any())).thenReturn(mailRequest);
 
-        doNothing().when(javaMailSender).send((MimeMessage) any());
-        when(javaMailSender.createMimeMessage()).thenReturn(new MimeMessage((Session) null));
+        doNothing().when(awsSesConnector).sendEmail(mailRequest);
 
         EmailMessageDTO emailMessageDTO = new EmailMessageDTO();
         emailMessageDTO.setSubject(SUBJECT);
@@ -104,8 +101,7 @@ class NotificationServiceImplTest {
         when(mailMessageMapper.toMessageRequest(any())).thenReturn(mailRequest);
         when(configuration.getTemplate(anyString())).thenReturn(template);
 
-        doNothing().when(javaMailSender).send((MimeMessage) any());
-        when(javaMailSender.createMimeMessage()).thenReturn(new MimeMessage((Session) null));
+        doNothing().when(awsSesConnector).sendEmail(mailRequest);
 
         EmailMessageDTO emailMessageDTO = new EmailMessageDTO();
         emailMessageDTO.setSubject(SUBJECT);
@@ -137,8 +133,7 @@ class NotificationServiceImplTest {
         when(mailMessageMapper.toMessageRequest(any())).thenReturn(mailRequest);
         when(configuration.getTemplate(anyString())).thenReturn(template);
 
-        doNothing().when(javaMailSender).send((MimeMessage) any());
-        when(javaMailSender.createMimeMessage()).thenReturn(new MimeMessage((Session) null));
+        doNothing().when(awsSesConnector).sendEmail(mailRequest);
 
         EmailMessageDTO emailMessageDTO = new EmailMessageDTO();
         emailMessageDTO.setSubject(SUBJECT);
