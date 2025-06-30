@@ -21,11 +21,10 @@ public class AwsSesClient implements AwsSesConnector {
 
         SendEmailRequest request = SendEmailRequest.builder()
                 .source(mailRequest.getFrom())
-                .destination(Destination.builder().toAddresses(mailRequest.getTo()).build())
-                .message(Message.builder()
-                        .subject(Content.builder().data(mailRequest.getSubject()).build())
-                        .body(Body.builder().html(Content.builder().data(mailRequest.getContent()).charset(CHARSET).build()).build())
-                        .build())
+                .destination(destination -> destination.toAddresses(mailRequest.getTo()))
+                .message(message -> message
+                        .subject(contentSubject -> contentSubject.data(mailRequest.getSubject()))
+                        .body(body -> body.html(contentHtml -> contentHtml.data(mailRequest.getContent()).charset(CHARSET))))
                 .build();
         SendEmailResponse response = sesClient.sendEmail(request);
         log.info("Email sent! Message ID: {}", response.messageId());
