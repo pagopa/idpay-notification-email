@@ -63,6 +63,7 @@ public class NotificationServiceImpl implements NotificationService {
             if(StringUtils.isNotBlank(emailMessageDTO.getTemplateName())) {
                 log.info("[SEND MESSAGE] Processing general mail");
                 this.processGeneralEmail(emailMessageDTO);
+                log.info("[SEND-MESSAGE] {}",emailMessageDTO);
                 Template template = this.freemarkerConfig.getTemplate(emailMessageDTO.getTemplateName() + "\\index.html");
                 Map<String, String> placeHolderWithInternationalization = messageService.getMessages(emailMessageDTO.getTemplateValues());
                 htmlContent = FreeMarkerTemplateUtils.processTemplateIntoString(template, placeHolderWithInternationalization);
