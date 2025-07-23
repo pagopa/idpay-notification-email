@@ -26,5 +26,4 @@ public class EmailNotificationApiControllerImpl implements EmailNotificationApiC
         notificationService.sendMessage(emailMessageDTO);
         return ResponseEntity.noContent().build();
     }
-
 }
