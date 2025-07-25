@@ -1,6 +1,6 @@
 <mjml lang="it">
   <mj-head>
-    <mj-title>Prodotti esclusi</mj-title>
+    <mj-title>Prodotti ripristinati</mj-title>
     <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
     <mj-attributes>
       <mj-all font-family="Titillium Web, Arial" />
@@ -67,13 +67,11 @@
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
               <p>Gentile utente,</p>
-              <p>ti informiamo che uno o più prodotti associati al tuo account sul Registro dei Beni sono stati esclusi in seguito ad una verifica.</p>
+              <p>ti informiamo che uno o più prodotti associati al tuo account sul Registro dei Beni sono stati ripristinati in seguito a una verifica.</p>
               <p>I prodotti soggetti all’esclusione sono:</p>
               <ul>
-                ${excludedList}
+                ${ripristinedList}
               </ul>
-              <p>Motivazione:</p>
-              <p>${motivation}</p>
               <p>Per consultare i dettagli <a href="https://selfcare.pagopa.it/regsitro-dei-beni" style="color: #0073E6;">accedi al portale</a>.</p>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D">

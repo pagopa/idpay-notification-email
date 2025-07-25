@@ -1,6 +1,6 @@
 <mjml lang="it">
   <mj-head>
-    <mj-title>Prodotti esclusi</mj-title>
+    <mj-title>Prodotti contrassegnati</mj-title>
     <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
     <mj-attributes>
       <mj-all font-family="Titillium Web, Arial" />
@@ -67,10 +67,10 @@
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
               <p>Gentile utente,</p>
-              <p>ti informiamo che uno o più prodotti associati al tuo account sul Registro dei Beni sono stati esclusi in seguito ad una verifica.</p>
-              <p>I prodotti soggetti all’esclusione sono:</p>
+              <p>ti informiamo che uno o più prodotti associati al tuo account sul Registro dei Beni sono stati contrassegnati in seguito ad una verifica.</p>
+              <p>I prodotti soggetti alla contrassegnazione sono:</p>
               <ul>
-                ${excludedList}
+                ${suspendedList}
               </ul>
               <p>Motivazione:</p>
               <p>${motivation}</p>
