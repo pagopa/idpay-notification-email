@@ -63,16 +63,16 @@
       <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
         <mj-column>
           <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo">
-            <h1 style="font-size:32px; line-height:40px;">Prodotti Esclusi</h1>
+            <h1 style="font-size:32px; line-height:40px;">I tuoi prodotti sul Registro dei Beni sono stati esclusi</h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
               <p>Gentile utente,</p>
-              <p>Alcuni prodotti sono stati <strong>esclusi</strong> a seguito della verifica.</p>
-              <p>Di seguito l’elenco dei lotti interessati:</p>
+              <p>ti informiamo che uno o più prodotti associati al tuo account ssul Registro dei Beni sono stati esclusi in seguito a una verifica.</p>
+              <p>I prodotti soggetti all’esclusione sono:</p>
               <ul>
                 ${excludedLotsList}
               </ul>
-              <p>Per consultare dettagli https://selfcare.pagopa.it/registro-dei-beni.</p>
+              <p>Per consultare i dettagli <a href="https://selfcare.pagopa.it/regsitro-dei-beni" style="color: #0073E6;">accedi al portale</a>.</p>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D">
             <p>A presto,<br aria-hidden="true">il team di Registro dei beni</p>
