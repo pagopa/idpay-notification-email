@@ -1,6 +1,6 @@
 <mjml lang="it">
   <mj-head>
-    <mj-title>Errore durante l'elaborazione dei dati</mj-title>
+    <mj-title>Prodotti ripristinati</mj-title>
     <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
     <mj-attributes>
       <mj-all font-family="Titillium Web, Arial" />
@@ -63,13 +63,19 @@
       <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
         <mj-column>
           <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo">
-            <h1 style="font-size:32px; line-height:40px;">Elaborazione parziale dei prodotti</h1>
+            <h1 style="font-size:32px; line-height:40px;">I tuoi prodotti sul Registro dei Beni sono stati esclusi</h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
-            <p>Gentile utente,</p>
-             <p>Abbiamo elaborato il file ${productFileName}, ma alcuni prodotti non sono stati caricati correttamente.</p>
-
-            <p>Ti invitiamo ad <a href="https://selfcare.pagopa.it/regsitro-dei-beni" style="color: #0073E6;">accedere al portale</a> per verificare l'esito e consultare il report dedicato.</p>
+              <p>Gentile utente,</p>
+              <p>ti informiamo che uno o più prodotti associati al tuo account sul Registro dei Beni sono stati ripristinati in seguito a una verifica.</p>
+              <p>I prodotti soggetti all’esclusione sono:</p>
+              <ul>
+                ${ripristinedList}
+              </ul>
+              <p>Per consultare i dettagli <a href="https://selfcare.pagopa.it/regsitro-dei-beni" style="color: #0073E6;">accedi al portale</a>.</p>
+          </mj-text>
+          <mj-text font-size="16px" line-height="24px" color="#17324D">
+             <p>Hai problemi tecnici o domande? Scrivi a portale.bonus@assistenza.pagopa.it.</p>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D">
             <p>A presto,<br aria-hidden="true">il team di Registro dei beni</p>
