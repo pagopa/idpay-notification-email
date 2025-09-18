@@ -67,7 +67,7 @@
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
             <p style="margin-bottom: 0px">Hai ottenuto il Bonus Elettrodomestici da ${amount}€. Sarà valido <b>per i prossimi 10 giorni.</b></p>
-            <p>Puoi visualizzarlo e gestirlo direttamente sul <a href="https://welfare.cstar.pagopa.it/portale-enti" style="color: #0073E6;">sito dedicato,</a> dove troverai tutti i dettagli sull'importo, la scadenza e le modalità d'uso.</p>
+            <p>Puoi visualizzarlo e gestirlo direttamente sul <a href="https://dev.bonuselettrodomestici.it/utente" style="color: #0073E6;">sito dedicato,</a> dove troverai tutti i dettagli sull'importo, la scadenza e le modalità d'uso.</p>
             <p style="margin-bottom: 0px"><b>Cosa puoi fare ora?</b></p>
               <p>Puoi usarlo per ottenere uno sconto del 30% sul prezzo d'acquisto di un elettrodomestico nuovo ad alta efficienza, fino ad un massimo di ${amount}€.</p>
             <p style="margin-bottom: 0px"><b>Come fare?</b></p>
