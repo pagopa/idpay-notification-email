@@ -63,11 +63,11 @@
       <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
         <mj-column>
           <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo">
-            <h1 style="font-size:32px; line-height:40px;">I tuoi prodotti sul Registro dei Beni sono stati esclusi</h1>
+            <h1 style="font-size:32px; line-height:40px;">I tuoi prodotti sull'Elenco informatico elettrodomestici sono stati esclusi</h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
               <p>Gentile utente,</p>
-              <p>ti informiamo che uno o più prodotti associati al tuo account sul Registro dei Beni sono stati esclusi in seguito ad una verifica.</p>
+              <p>ti informiamo che uno o più prodotti associati al tuo account sull'Elenco informatico elettrodomestici sono stati esclusi in seguito ad una verifica.</p>
               <p>I prodotti soggetti all’esclusione sono:</p>
               <ul>
                 ${excludedList}
@@ -80,7 +80,7 @@
              <p>Hai problemi tecnici o domande? Scrivi a portale.bonus@assistenza.pagopa.it.</p>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D">
-            <p>A presto,<br aria-hidden="true">il team di Registro dei beni</p>
+            <p>A presto,<br aria-hidden="true">il team di Elenco informatico elettrodomestici</p>
           </mj-text>
         </mj-column>
       </mj-section>
@@ -88,7 +88,7 @@
         <mj-column>
           <mj-spacer height="8px" css-class="spaziatura" />
           <mj-text>
-            <p style="color: #17324D">Ricevi questo messaggio perché hai un’utenza attiva come operatore su Registro dei beni dell'Area Riservata.</p>
+            <p style="color: #17324D">Ricevi questo messaggio perché hai un’utenza attiva come operatore su Elenco informatico elettrodomestici dell'Area Riservata.</p>
           </mj-text>
         </mj-column>
       </mj-section>
