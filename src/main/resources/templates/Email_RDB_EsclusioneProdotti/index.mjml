@@ -64,30 +64,23 @@
       <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
         <mj-column>
           <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo">
-            <h1 style="font-size:32px; line-height:40px;">I tuoi prodotti sul Registro dei Beni sono stati esclusi</h1>
-          </mj-text>
-          <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
-              <p>Gentile utente,</p>
-              <p>ti informiamo che uno o più prodotti associati al tuo account sul Registro dei Beni sono stati esclusi in seguito ad una verifica.</p>
-              <p>I prodotti soggetti all’esclusione sono:</p>
               <p>Ciao,</p>
               <p>dopo i controlli Invitalia, uno o più prodotti associati al tuo account nell'Elenco informatico degli elettrodomestici sono stati esclusi.</p>
               <p>I prodotti che non hanno superato il controllo sono:</p>
               <ul>
                 ${excludedList}
               </ul>
-              <p>Motivazione:</p>
               <p>La motivazione è:</p>
               <p>${motivation}</p>
-              <p>Per consultare i dettagli <a href="https://selfcare.pagopa.it/regsitro-dei-beni" style="color: #0073E6;">accedi al portale</a>.</p>
               <p>Per maggiori dettagli, <a href="https://selfcare.pagopa.it/regsitro-dei-beni" style="color: #0073E6;">accedi al portale.</a>.</p>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D">
-             <p>Hai problemi tecnici o domande? Scrivi a portale.bonus@assistenza.pagopa.it.</p>
+              <p>Per maggiori dettagli, <a href="https://selfcare.pagopa.it/regsitro-dei-beni" style="color: #0073E6;">accedi al portale.</a>.</p>
+          </mj-text>
+          <mj-text font-size="16px" line-height="24px" color="#17324D">
              <p>Hai problemi tecnici o domande? Scrivi a portale.bonus@bonuselettrodomestici.it .</p>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D">
-            <p>A presto,<br aria-hidden="true">il team di Registro dei beni</p>
             <p>A presto,<br aria-hidden="true">il team di PagoPA</p>
           </mj-text>
         </mj-column>
@@ -96,7 +89,6 @@
         <mj-column>
           <mj-spacer height="8px" css-class="spaziatura" />
           <mj-text>
-            <p style="color: #17324D">Ricevi questo messaggio perché hai un’utenza attiva come operatore su Registro dei beni dell'Area Riservata.</p>
             <p style="color: #17324D">Ricevi questo messaggio perché hai un’utenza attiva nel Portale Bonus.</p>
           </mj-text>
         </mj-column>
