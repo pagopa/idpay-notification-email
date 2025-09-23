@@ -1,6 +1,5 @@
 <mjml lang="it">
   <mj-head>
-    <mj-title>Prodotti esclusi</mj-title>
     <mj-title>Notifica di esclusione prodotto - <Elenco informatico degli elettrodomestici></mj-title>
     <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
     <mj-attributes>
@@ -72,10 +71,9 @@
               </ul>
               <p>La motivazione è:</p>
               <p>${motivation}</p>
-              <p>Per maggiori dettagli, <a href="https://selfcare.pagopa.it/regsitro-dei-beni" style="color: #0073E6;">accedi al portale.</a>.</p>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D">
-              <p>Per maggiori dettagli, <a href="https://selfcare.pagopa.it/regsitro-dei-beni" style="color: #0073E6;">accedi al portale.</a>.</p>
+              <p>Per maggiori dettagli, <a href="https://selfcare.pagopa.it/registro-dei-beni" style="color: #0073E6;">accedi al portale</a>.</p>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D">
              <p>Hai problemi tecnici o domande? Scrivi a portale.bonus@bonuselettrodomestici.it .</p>
