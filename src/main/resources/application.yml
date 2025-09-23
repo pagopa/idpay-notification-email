@@ -5,7 +5,7 @@ spring:
   jmx.enabled: true
   freemarker:
     enabled: true
-    cache: true
+    cache: false
     settings:
       recognize_standard_file_extensions: true
 #  messages:
