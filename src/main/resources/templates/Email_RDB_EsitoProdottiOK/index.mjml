@@ -66,13 +66,13 @@
             <h1 style="font-size:32px; line-height:40px;">Prodotti elaborati con successo</h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
-            <p>Gentile utente,</p>
-             <p>Il file dei prodotti ${productFileName} che hai caricato è stato elaborato correttamente.</p>
+            <p>Ciao,</p>
+             <p>Il file dei prodotti ${productFileName} è stato elaborato e tutti i prodotti sono stati caricati correttamente.</p>
 
-            <p>Per consultare i dettagli <a href="https://selfcare.pagopa.it/regsitro-dei-beni" style="color: #0073E6;">accedi al portale</a>.</p>
+            <p>Per vedere tutti i dettagli <a href="https://eie.cstar.pagopa.it/elenco-informatico-elettrodomestici" style="color: #0073E6;">accedi al portale</a>.</p>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D">
-            <p>A presto,<br aria-hidden="true">il team di Registro dei beni</p>
+            <p>A presto,<br aria-hidden="true">il team di PagoPA</p>
           </mj-text>
         </mj-column>
       </mj-section>
@@ -80,7 +80,7 @@
         <mj-column>
           <mj-spacer height="8px" css-class="spaziatura" />
           <mj-text>
-            <p style="color: #17324D">Ricevi questo messaggio perché hai un’utenza attiva come operatore su Registro dei beni dell'Area Riservata.</p>
+            <p style="color: #17324D">Ricevi questo messaggio perché hai un’utenza attiva come operatore su Elenco informatico degli elettrodomestici nell'Area Riservata.</p>
           </mj-text>
         </mj-column>
       </mj-section>
