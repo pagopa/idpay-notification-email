@@ -66,18 +66,18 @@
             <h1 style="font-size:32px; line-height:40px;">I tuoi prodotti sull'Elenco informatico elettrodomestici sono stati esclusi</h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
-              <p>Gentile utente,</p>
-              <p>ti informiamo che uno o più prodotti associati al tuo account sull'Elenco informatico elettrodomestici sono stati contrassegnati in seguito ad una verifica.</p>
-              <p>I prodotti soggetti alla contrassegnazione sono:</p>
-              <ul>
-                ${suspendedList}
-              </ul>
-              <p>Motivazione:</p>
-              <p>${motivation}</p>
-              <p>Per consultare i dettagli <a href="https://selfcare.pagopa.it/regsitro-dei-beni" style="color: #0073E6;">accedi al portale</a>.</p>
+            <p>Gentile utente,</p>
+            <p>ti informiamo che uno o più prodotti associati al tuo account sull'Elenco informatico elettrodomestici sono stati contrassegnati in seguito ad una verifica.</p>
+            <p>I prodotti soggetti alla contrassegnazione sono:</p>
+            <ul>
+              ${suspendedList}
+            </ul>
+            <p>Motivazione:</p>
+            <p>${formalMotivation}</p>
+            <p>Per consultare i dettagli <a href="https://selfcare.pagopa.it/regsitro-dei-beni" style="color: #0073E6;">accedi al portale</a>.</p>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D">
-             <p>Hai problemi tecnici o domande? Scrivi a portale.bonus@assistenza.pagopa.it.</p>
+            <p>Hai problemi tecnici o domande? Scrivi a portale.bonus@assistenza.pagopa.it.</p>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D">
             <p>A presto,<br aria-hidden="true">il team di Elenco informatico elettrodomestici</p>
