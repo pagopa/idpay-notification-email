@@ -83,7 +83,7 @@
     font-weight="bold"
     padding-top="10px"
     padding-bottom="16px"
-    href="https://dev.bonuselettrodomestici.it/utente"
+    href="https://uat.bonuselettrodomestici.it/utente"
   >
     Vai al sito
   </mj-button>
