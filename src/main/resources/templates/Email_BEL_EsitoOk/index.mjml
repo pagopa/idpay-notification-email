@@ -54,7 +54,7 @@
           <mj-spacer height="48px" css-class="spaziatura" />
           <mj-text>
             <mj-raw>
-              <img src="https://selfcare.pagopa.it/assets/logo_pagopacorp.png" alt="Logo di PagoPA S.p.A." class="logopagopa" width="116" align="left" style="display:block;width:116px;margin-bottom: 0px!important" />
+              <img src="https://assets.cdn.io.pagopa.it/logos/organizations/97532760580.png" alt="Logo del Ministero delle Imprese e del Made in Italy" width="80" align="left" style="display:block;width:80px;margin-bottom: 0px!important" />
             </mj-raw>
           </mj-text>
         </mj-column>
@@ -66,6 +66,7 @@
             <h1 style="font-size:32px; line-height:40px;">Hai Ottenuto il bonus!</h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
+            <p>Ciao ${nome},</p>
             <p style="margin-bottom: 0px">Hai ottenuto il Bonus Elettrodomestici da ${amount}€. Sarà valido <b>per i prossimi 10 giorni.</b></p>
             <p>Puoi visualizzarlo e gestirlo direttamente sul <a href="https://uat.bonuselettrodomestici.it/utente" style="color: #0073E6;">sito dedicato,</a> dove troverai tutti i dettagli sull'importo, la scadenza e le modalità d'uso.</p>
             <p style="margin-bottom: 0px"><b>Cosa puoi fare ora?</b></p>
@@ -93,7 +94,7 @@
         <mj-column>
           <mj-spacer height="8px" css-class="spaziatura" />
           <mj-text>
-            <p style="color: #17324D">Ricevi questa comunicazione perche hai richiesto il Bonus Elettrodomestici.</p>
+            <p style="color: #17324D; margin-bottom: 0px">Ricevi questa comunicazione perche hai richiesto il Bonus Elettrodomestici.</p>
             <p style="color: #17324D">Per leggere l'informativa sul trattamento dei dati personali <a href="https://www.google.com" style="color: #17324D;">premi qui</a>.</p>
             <p style="color: #17324D">Non rispondere a questa email: è usato solo per l'invio di comunicazione e, non essendo monitorato, non riceverai risposta.</p>
           </mj-text>

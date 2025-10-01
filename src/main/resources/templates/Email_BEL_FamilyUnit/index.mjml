@@ -1,6 +1,6 @@
 <mjml lang="it">
   <mj-head>
-    <mj-title>Hai ottenuto il bonus!</mj-title>
+    <mj-title>Il bonus è stato già richiesto</mj-title>
     <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
     <mj-attributes>
       <mj-all font-family="Titillium Web, Arial" />
@@ -63,31 +63,16 @@
       <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
         <mj-column>
           <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo">
-            <h1 style="font-size:32px; line-height:40px;">Hai Ottenuto il bonus!</h1>
+            <h1 style="font-size:32px; line-height:40px;">Il bonus è stato già richiesto</h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
             <p>Ciao ${nome},</p>
-            <p style="margin-bottom: 0px">Dopo le verifiche INPS, il tuo ISEE è diverso da quanto dichiarato.</p>
-            <p>Per questo motivo, non è stato possibile assegnarti il bonus da 200€ che avevi richiesto, ma hai comunque ottenuto il <b>bonus di 100€.</b></p>
-            <p style="margin-bottom: 0px"><b>Cosa puoi fare ora?</b></p>
-              <p>Puoi usarlo per ottenere uno sconto del 30% sul prezzo d'acquisto di un elettrodomestico nuovo ad alta efficienza, fino ad un massimo di 100€.</p>
-            <p style="margin-bottom: 0px"><b>Come fare?</b></p>
-            <p>Per avere più informazioni su come e dove usare il bonus, leggi i dettagli.</p>
-            <p style="margin-bottom: 0px"><b>Importante:</b> puoi usare il bonus solo se hai un vecchio elettrodomestico da smaltire. Concorda con il venditore quando e come consegnarlo, ma non smaltirlo autonomamente in discarica.</p>
 
+            <p style="margin-bottom: 0px">La tua richiesta per Bonus Elettrodomestici non può essere elaborata.</p>
+            <p>Un'altra persona che fa parte della tua famiglia ha già presentato richiesta.</p>
+            <p>È possibile inviare <b>una sola richiesta per ogni famiglia anagrafica.</b></p>
+            <p>Per avere più dettagli del bonus, <a href="https://www.google.com" style="color: #0073E6;">leggi come fare.</a></p>
           </mj-text>
-            <mj-button
-    background-color="#0073E6"
-    color="#ffffff"
-    align="left"
-    font-size="16px"
-    font-weight="bold"
-    padding-top="10px"
-    padding-bottom="16px"
-    href="https://uat.bonuselettrodomestici.it/utente"
-  >
-    Vai al sito
-  </mj-button>
         </mj-column>
       </mj-section>
       <mj-section>
