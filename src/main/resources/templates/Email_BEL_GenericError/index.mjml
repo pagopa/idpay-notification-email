@@ -1,6 +1,6 @@
 <mjml lang="it">
   <mj-head>
-    <mj-title>Hai ottenuto il bonus!</mj-title>
+    <mj-title>Non è stato possibile assegnarti il bonus</mj-title>
     <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
     <mj-attributes>
       <mj-all font-family="Titillium Web, Arial" />
@@ -63,17 +63,15 @@
       <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
         <mj-column>
           <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo">
-            <h1 style="font-size:32px; line-height:40px;">Hai Ottenuto il bonus!</h1>
+            <h1 style="font-size:32px; line-height:40px;">Non è stato possibile assegnarti il bonus</h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
             <p>Ciao ${name},</p>
-            <p style="margin-bottom: 0px">Hai ottenuto il Bonus Elettrodomestici da ${amount}€. Sarà valido <b>per i prossimi 10 giorni.</b></p>
-            <p>Puoi visualizzarlo e gestirlo direttamente sul <a href="https://uat.bonuselettrodomestici.it/utente" style="color: #0073E6;">sito dedicato,</a> dove troverai tutti i dettagli sull'importo, la scadenza e le modalità d'uso.</p>
-            <p style="margin-bottom: 0px"><b>Cosa puoi fare ora?</b></p>
-              <p>Puoi usarlo per ottenere uno sconto del 30% sul prezzo d'acquisto di un elettrodomestico nuovo ad alta efficienza, fino ad un massimo di ${amount}€.</p>
-            <p style="margin-bottom: 0px"><b>Come fare?</b></p>
-            <p>Per avere più informazioni su come e dove usare il bonus, leggi i dettagli.</p>
-            <p style="margin-bottom: 0px"><b>Importante:</b> puoi usare il bonus solo se hai un vecchio elettrodomestico da smaltire. Concorda con il venditore quando e come consegnarlo, ma non smaltirlo autonomamente in discarica.</p>
+            <p>purtroppo la tua richiesta per il Bonus Elettrodomestici non è stata accettata.</p>
+            <p>Non è stato possibile assegnati il bonus perché:</p>
+            <p><li style="margin-left:20px;">${reason}</li></p>
+            <p><b>Hai dei dubbi?</b></p>
+            <p>Se pensi che ci sia stato un errore, segnalalo a ${managedEntity}.</p>
 
           </mj-text>
             <mj-button
