@@ -69,7 +69,7 @@
             <p>Ciao ${name},</p>
             <p>purtroppo la tua richiesta per il Bonus Elettrodomestici non è stata accettata.</p>
             <p>Non è stato possibile assegnati il bonus perché:</p>
-            <p><li>${reason}</li></p>
+            <p><li style="margin-left:20px;">${reason}</li></p>
             <p><b>Hai dei dubbi?</b></p>
             <p>Se pensi che ci sia stato un errore, segnalalo a ${managedEntity}.</p>
 
