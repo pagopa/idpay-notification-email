@@ -66,7 +66,7 @@
             <h1 style="font-size:32px; line-height:40px;">Bonus Elettrodomestici: tutti i fondi sono stati assegnati </h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
-            <p>Ciao ${nome},</p>
+            <p>Ciao ${name},</p>
             <p style="margin-bottom: 0px">la tua richiesta era in lista d'attesa, ma <b>tutti i fondi disponibili sono stati assegnati.</b></p>
             <p>Ci dispiace, ma purtroppo non è possibile assegnare il bonus.</p>
             <p>Grazie per aver mostrato interesse per il <b>Bonues Elettrodomestici.</b></p>

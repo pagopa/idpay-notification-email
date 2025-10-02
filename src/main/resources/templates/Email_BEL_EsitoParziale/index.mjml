@@ -66,7 +66,7 @@
             <h1 style="font-size:32px; line-height:40px;">Hai Ottenuto il bonus!</h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
-            <p>Ciao ${nome},</p>
+            <p>Ciao ${name},</p>
             <p style="margin-bottom: 0px">Dopo le verifiche INPS, il tuo ISEE è diverso da quanto dichiarato.</p>
             <p>Per questo motivo, non è stato possibile assegnarti il bonus da 200€ che avevi richiesto, ma hai comunque ottenuto il <b>bonus di 100€.</b></p>
             <p style="margin-bottom: 0px"><b>Cosa puoi fare ora?</b></p>

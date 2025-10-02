@@ -66,12 +66,12 @@
             <h1 style="font-size:32px; line-height:40px;">Non è stato possibile assegnarti il bonus</h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
-            <p>Ciao ${nome},</p>
+            <p>Ciao ${name},</p>
             <p>purtroppo la tua richiesta per il Bonus Elettrodomestici non è stata accettata.</p>
             <p>Non è stato possibile assegnati il bonus perché:</p>
-            <p><li>${motivo}</li></p>
+            <p><li>${reason}</li></p>
             <p><b>Hai dei dubbi?</b></p>
-            <p>Se pensi che ci sia stato un errore, segnalalo a ${enteGestore}.</p>
+            <p>Se pensi che ci sia stato un errore, segnalalo a ${managedEntity}.</p>
 
           </mj-text>
             <mj-button

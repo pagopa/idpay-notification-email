@@ -66,7 +66,7 @@
             <h1 style="font-size:32px; line-height:40px;">Il tuo bonus scade tra 3 giorni!</h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
-            <p>Ciao ${nome},</p>
+            <p>Ciao ${name},</p>
             <p>hai già deciso come usare il Bonus Elettrodomestici?</p>
             <p><b>Hai ancora 3 giorni</b> per usare il contributo e sostituire un vecchio elettrodomestico con uno a basso consumo energetico.</p>
             <p><b>Troppo tardi?</b></p>
