@@ -1,6 +1,6 @@
 <mjml lang="it">
   <mj-head>
-    <mj-title>Prodotti elaborati con successo</mj-title>
+    <mj-title>Bonus Elettrodomestici: tutti i fondi sono stati assegnati</mj-title>
     <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
     <mj-attributes>
       <mj-all font-family="Titillium Web, Arial" />
@@ -49,12 +49,12 @@
         </mj-column>
       </mj-section>-->
       <!-- logo pagoPA -->
-      <mj-section background-color="#ffffff" border-top="solid 8px #80C5D3" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
+      <mj-section background-color="#ffffff"  border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
         <mj-column>
           <mj-spacer height="48px" css-class="spaziatura" />
           <mj-text>
             <mj-raw>
-              <img src="https://selfcare.pagopa.it/assets/logo_pagopacorp.png" alt="Logo di PagoPA S.p.A." class="logopagopa" width="116" align="left" style="display:block;width:116px;" />
+              <img src="https://assets.cdn.io.pagopa.it/logos/organizations/97532760580.png" alt="Logo del Ministero delle Imprese e del Made in Italy" width="80" align="left" style="display:block;width:80px;margin-bottom: 0px!important" />
             </mj-raw>
           </mj-text>
         </mj-column>
@@ -63,24 +63,36 @@
       <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
         <mj-column>
           <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo">
-            <h1 style="font-size:32px; line-height:40px;">Il caricamento è andato a buon fine</h1>
+            <h1 style="font-size:32px; line-height:40px;">Bonus Elettrodomestici: tutti i fondi sono stati assegnati </h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
-            <p>Ciao,</p>
-            <p>il file dei prodotti ${productFileName} è stato elaborato e tutti i prodotti sono stati caricati correttamente.</p>
-
-            <p>Per vedere tutti i dettagli <a href="https://selfcare.pagopa.it/regsitro-dei-beni" style="color: #0073E6;">accedi al portale</a>.</p>
+            <p>Ciao ${name},</p>
+            <p style="margin-bottom: 0px">la tua richiesta era in lista d'attesa, ma <b>tutti i fondi disponibili sono stati assegnati.</b></p>
+            <p>Ci dispiace, ma purtroppo non è possibile assegnare il bonus.</p>
+            <p>Grazie per aver mostrato interesse per il <b>Bonues Elettrodomestici.</b></p>
+            <p>Alla prossima iniziativa!</p>
           </mj-text>
-          <mj-text font-size="16px" line-height="24px" color="#17324D">
-            <p>A presto,<br aria-hidden="true">Il team di PagoPA</p>
-          </mj-text>
+            <mj-button
+    background-color="#0073E6"
+    color="#ffffff"
+    align="left"
+    font-size="16px"
+    font-weight="bold"
+    padding-top="10px"
+    padding-bottom="16px"
+    href="https://uat.bonuselettrodomestici.it/utente"
+  >
+    Vai al sito
+  </mj-button>
         </mj-column>
       </mj-section>
       <mj-section>
         <mj-column>
           <mj-spacer height="8px" css-class="spaziatura" />
           <mj-text>
-            <p style="color: #17324D">Ricevi questo messaggio perché hai un’utenza attiva come operatore su Elenco informatico elettrodomestici nell'Area Riservata.</p>
+            <p style="color: #17324D; margin-bottom: 0px">Ricevi questa comunicazione perche hai richiesto il Bonus Elettrodomestici.</p>
+            <p style="color: #17324D">Per leggere l'informativa sul trattamento dei dati personali <a href="https://www.google.com" style="color: #17324D;">premi qui</a>.</p>
+            <p style="color: #17324D">Non rispondere a questa email: è usato solo per l'invio di comunicazione e, non essendo monitorato, non riceverai risposta.</p>
           </mj-text>
         </mj-column>
       </mj-section>

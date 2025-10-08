@@ -67,7 +67,7 @@
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
             <p>Ciao,</p>
-            <p>dopo i controlli Invitalia, uno o più prodotti associati al tuo account nell'Elenco informatico degli elettrodomestici sono stati esclusi.</p>
+            <p>a seguito dei controlli effettuati da Invitalia, uno o più prodotti associati al tuo account nell'Elenco informatico degli elettrodomestici sono stati esclusi.</p>
             <p>I prodotti che non hanno superato il controllo sono:</p>
             <ul>
               ${excludedList}
