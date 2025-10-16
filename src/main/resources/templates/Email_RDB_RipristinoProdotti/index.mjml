@@ -72,7 +72,7 @@
             <ul>
               ${ripristinedList}
             </ul>
-            <p>Per consultare i dettagli <a href="https://selfcare.pagopa.it/regsitro-dei-beni" style="color: #0073E6;">accedi al portale</a>.</p>
+            <p>Per consultare i dettagli <a href="https://eie.cstar.pagopa.it/elenco-informatico-elettrodomestici" style="color: #0073E6;">accedi al portale</a>.</p>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D">
             <p>Hai problemi tecnici o domande? Scrivi a portale.bonus@assistenza.pagopa.it.</p>
