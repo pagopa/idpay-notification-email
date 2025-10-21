@@ -1,6 +1,6 @@
 <mjml lang="it">
   <mj-head>
-    <mj-title>Errore durante l'elaborazione dei dati</mj-title>
+    <mj-title>Prodotti ripristinati</mj-title>
     <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
     <mj-attributes>
       <mj-all font-family="Titillium Web, Arial" />
@@ -63,16 +63,22 @@
       <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
         <mj-column>
           <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo">
-            <h1 style="font-size:32px; line-height:40px;">Il caricamento è riuscito solo in parte</h1>
+            <h1 style="font-size:32px; line-height:40px;">I tuoi prodotti sull'Elenco informatico elettrodomestici sono stati esclusi</h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
-            <p>Ciao,</p>
-            <p>il file dei prodotti ${productFileName} è stato elaborato, ma alcuni prodotti non sono stati caricati correttamente.</p>
-
-            <p>Per verificare l'esito e consultare il report dedicato, <a href="https://eie.cstar.pagopa.it/elenco-informatico-elettrodomestici" style="color: #0073E6;">accedi al portale</a></p>
+            <p>Gentile utente,</p>
+            <p>ti informiamo che uno o più prodotti associati al tuo account sull'Elenco informatico elettrodomestici sono stati ripristinati in seguito a una verifica.</p>
+            <p>I prodotti soggetti all’esclusione sono:</p>
+            <ul>
+              ${ripristinedList}
+            </ul>
+            <p>Per consultare i dettagli <a href="https://eie.cstar.pagopa.it/elenco-informatico-elettrodomestici" style="color: #0073E6;">accedi al portale</a>.</p>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D">
-            <p>A presto,<br aria-hidden="true">Il team di PagoPA</p>
+            <p>Hai problemi tecnici o domande? Scrivi a portale.bonus@assistenza.pagopa.it.</p>
+          </mj-text>
+          <mj-text font-size="16px" line-height="24px" color="#17324D">
+            <p>A presto,<br aria-hidden="true">il team di Elenco informatico elettrodomestici</p>
           </mj-text>
         </mj-column>
       </mj-section>
@@ -80,7 +86,7 @@
         <mj-column>
           <mj-spacer height="8px" css-class="spaziatura" />
           <mj-text>
-            <p style="color: #17324D">Ricevi questo messaggio perché hai un’utenza attiva come operatore su Elenco informatico elettrodomestici nell'Area Riservata.</p>
+            <p style="color: #17324D">Ricevi questo messaggio perché hai un’utenza attiva come operatore su Elenco informatico elettrodomestici dell'Area Riservata.</p>
           </mj-text>
         </mj-column>
       </mj-section>
