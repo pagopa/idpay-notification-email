@@ -1,6 +1,6 @@
 <mjml lang="it">
     <mj-head>
-        <mj-title>Il tuo bonus scade tra ${expiringDay} giorni!</mj-title>
+        <mj-title>Il tuo bonus sta per scadere!</mj-title>
         <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
         <mj-attributes>
             <mj-all font-family="Titillium Web, Arial" />
@@ -63,7 +63,7 @@
             <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
                 <mj-column>
                     <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo">
-                        <h1 style="font-size:32px; line-height:40px;">Il tuo bonus scade tra 3 giorni!</h1>
+                        <h1 style="font-size:32px; line-height:40px;">Il tuo bonus sta per scadere!</h1>
                     </mj-text>
                     <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
                         <p>Ciao ${name},</p>
