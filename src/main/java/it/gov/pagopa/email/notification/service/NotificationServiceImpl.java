@@ -33,8 +33,6 @@ public class NotificationServiceImpl implements NotificationService {
     @Value("${app.email.notification.no-reply.assisted-link}")
     private final String assistedLink;
 
-    private final String MAGANED_ENTITY = "managedEntity";
-
     @Autowired
     NotificationServiceImpl(
             Configuration freemarkerConfig,
@@ -71,8 +69,9 @@ public class NotificationServiceImpl implements NotificationService {
                 this.processGeneralEmail(emailMessageDTO);
                 Template template = this.freemarkerConfig.getTemplate(emailMessageDTO.getTemplateName() + "\\index.html");
                 Map<String, String> placeHolderWithInternationalization = messageService.getMessages(emailMessageDTO.getTemplateValues());
-                if(placeHolderWithInternationalization.get(MAGANED_ENTITY) != null && placeHolderWithInternationalization.get(MAGANED_ENTITY).equalsIgnoreCase("Assistenza")){
-                    placeHolderWithInternationalization.put(MAGANED_ENTITY, "<a href=\"" + assistedLink + "\" style=\"color: #0073E6;\">Assistenza</a>");
+                String managedEntity = "managedEntity";
+                if(placeHolderWithInternationalization.get(managedEntity) != null && placeHolderWithInternationalization.get(managedEntity).equalsIgnoreCase("Assistenza")){
+                    placeHolderWithInternationalization.put(managedEntity, "<a href=\"" + assistedLink + "\" style=\"color: #0073E6;\">Assistenza</a>");
                 }
                 htmlContent = FreeMarkerTemplateUtils.processTemplateIntoString(template, placeHolderWithInternationalization);
             }
