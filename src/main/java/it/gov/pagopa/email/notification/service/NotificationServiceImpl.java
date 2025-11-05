@@ -30,6 +30,8 @@ public class NotificationServiceImpl implements NotificationService {
 
     private final AwsSesConnector awsSesConnector;
 
+    @Value("${app.email.notification.no-reply.assisted-link}")
+    private final String assistedLink;
 
     @Autowired
     NotificationServiceImpl(
@@ -40,6 +42,7 @@ public class NotificationServiceImpl implements NotificationService {
             @Value("${app.email.notification.assistance.subject-prefix}") String assistanceSubjectPrefix,
             @Value("${app.email.notification.no-reply.sender}") String noReplySenderMailAddress,
             @Value("${app.email.notification.no-reply.subject-prefix}") String noReplySubjectPrefix,
+            @Value("${app.email.notification.no-reply.assisted-link}") String assistedLink,
             AwsSesConnector awsSesConnector
 
     ) {
@@ -51,6 +54,7 @@ public class NotificationServiceImpl implements NotificationService {
         this.noReplySenderMailAddress = noReplySenderMailAddress;
         this.noReplySubjectPrefix = noReplySubjectPrefix;
         this.awsSesConnector = awsSesConnector;
+        this.assistedLink = assistedLink;
     }
 
     @Override
@@ -65,6 +69,10 @@ public class NotificationServiceImpl implements NotificationService {
                 this.processGeneralEmail(emailMessageDTO);
                 Template template = this.freemarkerConfig.getTemplate(emailMessageDTO.getTemplateName() + "\\index.html");
                 Map<String, String> placeHolderWithInternationalization = messageService.getMessages(emailMessageDTO.getTemplateValues());
+                String managedEntity = "managedEntity";
+                if(placeHolderWithInternationalization.get(managedEntity) != null && placeHolderWithInternationalization.get(managedEntity).equalsIgnoreCase("Assistenza")){
+                    placeHolderWithInternationalization.put(managedEntity, "<a href=\"" + assistedLink + "\" style=\"color: #0073E6;\">Assistenza</a>");
+                }
                 htmlContent = FreeMarkerTemplateUtils.processTemplateIntoString(template, placeHolderWithInternationalization);
             }
             else{
