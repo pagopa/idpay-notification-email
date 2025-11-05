@@ -65,6 +65,9 @@ public class NotificationServiceImpl implements NotificationService {
                 this.processGeneralEmail(emailMessageDTO);
                 Template template = this.freemarkerConfig.getTemplate(emailMessageDTO.getTemplateName() + "\\index.html");
                 Map<String, String> placeHolderWithInternationalization = messageService.getMessages(emailMessageDTO.getTemplateValues());
+                if(placeHolderWithInternationalization.get("managedEntity").equalsIgnoreCase("Assistenza")){
+                    placeHolderWithInternationalization.put("managedEntity", "<a href=\"https://bonus.assistenza.pagopa.it/requests/new?product=prod-bonus-ed\" style=\"color: #0073E6;\">Assistenza</a>");
+                }
                 htmlContent = FreeMarkerTemplateUtils.processTemplateIntoString(template, placeHolderWithInternationalization);
             }
             else{
