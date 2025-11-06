@@ -68,7 +68,7 @@
                     <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
                         <p>Ciao ${name},</p>
                         <p>purtroppo la tua richiesta per il Bonus Elettrodomestici non è stata accettata.</p>
-                        <p>La verifica dei requisiti non è andata a buon fine a causa di problemi di comunicazione con gli enti competenti</p>
+                        <p>La verifica dei requisiti non è andata a buon fine a causa di problemi di comunicazione con gli enti competenti.</p>
                         <p><b>Hai dei dubbi?</b></p>
                         <p>Se pensi che ci sia stato un errore, segnalalo a ${managedEntity}.</p>
 
