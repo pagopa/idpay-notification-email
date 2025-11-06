@@ -67,7 +67,7 @@
                     </mj-text>
                     <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
                         <p>Ciao ${name},</p>
-                        <p style="margin-bottom: 0px">Dopo le verifiche con INPS, il tuo ISEE risulta difforme o diverso da quanto dichiarato. Sarà valido <b>per i prossimi 15 giorni.</b></p</p>
+                        <p style="margin-bottom: 0px">Dopo le verifiche con INPS, il tuo ISEE risulta difforme o diverso da quanto dichiarato. Sarà valido <b>per i prossimi 15 giorni.</b></p>
                         <p>Per questo motivo, non è stato possibile assegnarti il bonus da 200€ che avevi richiesto, ma hai ottenuto comunque il <b>bonus di 100€.</b></p>
                         <p>Se ritieni che ci sia un errore, verifica il tuo ISEE direttamente con INPS.</p>
                         <p><b>Cosa puoi fare ora?</b></p>
