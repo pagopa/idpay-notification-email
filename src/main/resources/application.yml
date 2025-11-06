@@ -47,7 +47,6 @@ app:
       no-reply:
         sender: ${NO_REPLY_MAIL:noreply@cstar.pagopa.it}
         subject-prefix: ${NO_REPLY_SUBJECT_PREFIX:${ENV_TARGET:DEV} - }
-        assisted-link: ${ASSISTED_LINK:https://bonus.assistenza.pagopa.it/requests/new?product=prod-bonus-ed}
   aws:
     region: ${AWS_REGION:eu-south-1}
 
