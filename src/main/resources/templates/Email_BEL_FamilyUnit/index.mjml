@@ -80,7 +80,7 @@
                     <mj-spacer height="8px" css-class="spaziatura" />
                     <mj-text>
                         <p style="color: #17324D; margin-bottom: 0px">Ricevi questa comunicazione perche hai richiesto il Bonus Elettrodomestici.</p>
-                        <p style="color: #17324D">Per leggere l'informativa sul trattamento dei dati personali <a href="https://bonuselettrodomestici.it/privacy/utenti-finali" style="color: #17324D;">premi qui</a>.</p>
+                        <p style="color: #17324D">Per leggere l'informativa sul trattamento dei dati personali <a href="https://bonuselettrodomestici.it/utente/informativa-privacy" style="color: #17324D;">premi qui</a>.</p>
                         <p style="color: #17324D">Non rispondere a questa email: è usato solo per l'invio di comunicazione e, non essendo monitorato, non riceverai risposta.</p>
                     </mj-text>
                 </mj-column>
