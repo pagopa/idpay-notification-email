@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Esportazione Prodotti</title>
+    <style>
+        body { margin:0; padding:0; background:#F3F4F6; font-family: Helvetica, Arial, sans-serif; color:#1F2937; }
+        .container { max-width:640px; margin:0 auto; padding:0 16px; }
+        .header { background:#0B1234; color:#fff; text-align:center; padding:24px 12px; }
+        .header small { color:#9CA3AF; display:block; margin-top:6px; }
+        .card { background:#fff; border-radius:10px; padding:24px; margin:24px 0; }
+        .title { font-size:18px; font-weight:700; color:#111827; margin:0 0 8px 0; }
+        .btn { display:inline-block; background:#0053A6; color:#fff !important; text-decoration:none; padding:12px 18px; border-radius:6px; font-weight:700; margin:12px 0; }
+        .muted { font-size:12px; color:#6B7280; }
+        a { color:#0053A6; text-decoration:none; }
+        @media (prefers-color-scheme: dark) {
+          body { background:#0B0F19; color:#E5E7EB; }
+          .card { background:#111827; }
+          .header { background:#0B1234; }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div style="font-size:18px; font-weight:700;">IDPAY · Esportazione Prodotti</div>
+        <small>${initiativeName!'IDPAY'} · ${orgName!''} · ${exportDate!''}</small>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <h1 class="title">Il tuo CSV è pronto</h1>
+        <p>
+            Ciao,<br><br>
+            l’esportazione <strong>${productFileName!''}</strong> è stata generata correttamente.<br/>
+            Puoi scaricarla dal link qui sotto:
+        </p>
+
+        <p>
+            <a class="btn" href="${downloadLink!''}" target="_blank" rel="noopener">Scarica il CSV</a>
+        </p>
+
+        <p class="muted">
+            Oppure copia e incolla questo link nel browser:<br>
+            <a href="${downloadLink!''}" target="_blank" rel="noopener">${downloadLink!''}</a>
+        </p>
+    </div>
+
+    <p class="muted">
+        Se non ti aspettavi questa email, ignora il messaggio.<br>
+        © ${.now?string('yyyy')} PagoPA S.p.A.
+    </p>
+</div>
+</body>
+</html>
