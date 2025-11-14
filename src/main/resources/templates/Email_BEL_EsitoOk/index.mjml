@@ -68,11 +68,11 @@
                     <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
                         <p>Ciao ${name},</p>
                         <p style="margin-bottom: 0px">Hai ottenuto il Bonus Elettrodomestici da ${amount}€. Sarà valido <b>per i prossimi 15 giorni.</b></p>
-                        <p>Puoi consultarlo e gestirlo direttamente sul <a href="https://uat.bonuselettrodomestici.it/utente" style="color: #0073E6;">sito dedicato</a>, dove troverai tutti i dettagli sull'importo, la scadenza e le modalità d'uso.</p>
+                        <p>Puoi consultarlo e gestirlo direttamente sul <a href="https://bonuselettrodomestici.it/utente" style="color: #0073E6;">sito dedicato</a>, dove troverai tutti i dettagli sull'importo, la scadenza e le modalità d'uso.</p>
                         <p style="margin-bottom: 0px"><b>Cosa puoi fare ora?</b></p>
                         <p>Puoi usarlo per ottenere uno sconto del 30% sul prezzo d'acquisto di un elettrodomestico nuovo ad alta efficienza, fino ad un massimo di ${amount}€.</p>
                         <p style="margin-bottom: 0px"><b>Come fare?</b></p>
-                        <p>Per avere più informazioni su come e dove usare il bonus, <a href="https://google.com" style="color: #0073E6;">leggi i dettagli</a>.</p>
+                        <p>Per avere più informazioni su come e dove usare il bonus, <a href="https://bonuselettrodomestici.it" style="color: #0073E6;">leggi i dettagli</a>.</p>
                         <p style="margin-bottom: 0px"><b>Importante:</b> ricorda che puoi usare il bonus solo se hai un vecchio elettrodomestico da smaltire. Concorda con il venditore quando e come consegnarlo, ma non smaltirlo autonomamente in discarica.</p>
 
                     </mj-text>
@@ -84,7 +84,7 @@
                             font-weight="bold"
                             padding-top="10px"
                             padding-bottom="16px"
-                            href="https://uat.bonuselettrodomestici.it/utente"
+                            href="https://bonuselettrodomestici.it/utente"
                     >
                         Vai al sito
                     </mj-button>
@@ -95,7 +95,7 @@
                     <mj-spacer height="8px" css-class="spaziatura" />
                     <mj-text>
                         <p style="color: #17324D; margin-bottom: 0px">Ricevi questa comunicazione perche hai richiesto il Bonus Elettrodomestici.</p>
-                        <p style="color: #17324D">Per leggere l'informativa sul trattamento dei dati personali <a href="https://bonuselettrodomestici.it/privacy/utenti-finali" style="color: #17324D;">premi qui</a>.</p>
+                        <p style="color: #17324D">Per leggere l'informativa sul trattamento dei dati personali <a href="https://bonuselettrodomestici.it/utente/privacy-policy" style="color: #17324D;">premi qui</a>.</p>
                         <p style="color: #17324D">Non rispondere a questa email: è usato solo per l'invio di comunicazione e, non essendo monitorato, non riceverai risposta.</p>
                     </mj-text>
                 </mj-column>

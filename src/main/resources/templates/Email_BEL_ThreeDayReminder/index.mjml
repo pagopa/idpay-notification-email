@@ -1,6 +1,6 @@
 <mjml lang="it">
     <mj-head>
-        <mj-title>Il tuo bonus scade tra 3 giorni!</mj-title>
+        <mj-title>Il tuo bonus sta per scadere!</mj-title>
         <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
         <mj-attributes>
             <mj-all font-family="Titillium Web, Arial" />
@@ -63,16 +63,16 @@
             <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
                 <mj-column>
                     <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo">
-                        <h1 style="font-size:32px; line-height:40px;">Il tuo bonus scade tra 3 giorni!</h1>
+                        <h1 style="font-size:32px; line-height:40px;">Il tuo bonus sta per scadere!</h1>
                     </mj-text>
                     <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
                         <p>Ciao ${name},</p>
                         <p>hai già deciso come usare il Bonus Elettrodomestici?</p>
-                        <p><b>Hai ancora 3 giorni</b> per usare il contributo e sostituire un vecchio elettrodomestico con uno a basso consumo energetico.</p>
+                        <p>Hai tempo <b>fino alle 23:59 del giorno ${voucherEndDate}</b> per usare il contributo e sostituire un vecchio elettrodomestico con uno a basso consumo energetico.</p>
                         <p><b>Troppo tardi?</b></p>
                         <p>Se non hai fatto in tempo ad usare il bonus, puoi fare nuovamente richiesta. Se ci sono ancora fondi disponibili, la richiesta verrà inserita in lista d'attesa.</p>
                         <p><b>Hai domande?</b></p>
-                        <p>Per avere più dettagli su come e dove usare il bonus, <a href="https://www.google.com" style="color: #0073E6;">leggi la guida</a>.</p>
+                        <p>Per avere più dettagli su come e dove usare il bonus, <a href="https://bonuselettrodomestici.it" style="color: #0073E6;">leggi la guida</a>.</p>
 
                     </mj-text>
                     <mj-button
@@ -83,7 +83,7 @@
                             font-weight="bold"
                             padding-top="10px"
                             padding-bottom="16px"
-                            href="https://uat.bonuselettrodomestici.it/utente"
+                            href="https://bonuselettrodomestici.it/utente"
                     >
                         Vai al sito
                     </mj-button>
@@ -94,7 +94,7 @@
                     <mj-spacer height="8px" css-class="spaziatura" />
                     <mj-text>
                         <p style="color: #17324D; margin-bottom: 0px">Ricevi questa comunicazione perche hai richiesto il Bonus Elettrodomestici.</p>
-                        <p style="color: #17324D">Per leggere l'informativa sul trattamento dei dati personali <a href="https://bonuselettrodomestici.it/privacy/utenti-finali" style="color: #17324D;">premi qui</a>.</p>
+                        <p style="color: #17324D">Per leggere l'informativa sul trattamento dei dati personali <a href="https://bonuselettrodomestici.it/utente/privacy-policy" style="color: #17324D;">premi qui</a>.</p>
                         <p style="color: #17324D">Non rispondere a questa email: è usato solo per l'invio di comunicazione e, non essendo monitorato, non riceverai risposta.</p>
                     </mj-text>
                 </mj-column>

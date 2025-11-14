@@ -68,8 +68,7 @@
                     <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
                         <p>Ciao ${name},</p>
                         <p>purtroppo la tua richiesta per il Bonus Elettrodomestici non è stata accettata.</p>
-                        <p>Non è stato possibile assegnati il bonus perché:</p>
-                        <p><li style="margin-left:20px;">${reason}</li></p>
+                        <p>La verifica dei requisiti non è andata a buon fine a causa di problemi di comunicazione con gli enti competenti.</p>
                         <p><b>Hai dei dubbi?</b></p>
                         <p>Se pensi che ci sia stato un errore, segnalalo a ${managedEntity}.</p>
 
@@ -82,7 +81,7 @@
                             font-weight="bold"
                             padding-top="10px"
                             padding-bottom="16px"
-                            href="https://uat.bonuselettrodomestici.it/utente"
+                            href="https://bonuselettrodomestici.it/utente"
                     >
                         Vai al sito
                     </mj-button>
@@ -93,7 +92,7 @@
                     <mj-spacer height="8px" css-class="spaziatura" />
                     <mj-text>
                         <p style="color: #17324D; margin-bottom: 0px">Ricevi questa comunicazione perche hai richiesto il Bonus Elettrodomestici.</p>
-                        <p style="color: #17324D">Per leggere l'informativa sul trattamento dei dati personali <a href="https://bonuselettrodomestici.it/privacy/utenti-finali" style="color: #17324D;">premi qui</a>.</p>
+                        <p style="color: #17324D">Per leggere l'informativa sul trattamento dei dati personali <a href="https://bonuselettrodomestici.it/utente/privacy-policy" style="color: #17324D;">premi qui</a>.</p>
                         <p style="color: #17324D">Non rispondere a questa email: è usato solo per l'invio di comunicazione e, non essendo monitorato, non riceverai risposta.</p>
                     </mj-text>
                 </mj-column>
