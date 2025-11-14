@@ -10,7 +10,8 @@ spring:
       recognize_standard_file_extensions: true
 #  messages:
 #    basename: templates/messages/labels
-
+server:
+  port: ${NOTIFICATION_EMAIL_PORT:8081}
   data:
     mongodb:
       uri: ${MONGODB_URI}
