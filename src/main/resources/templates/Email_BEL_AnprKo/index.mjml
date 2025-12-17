@@ -73,7 +73,7 @@
 
                     <mj-text font-size="16px" line-height="24px" color="#17324D">
                         <p>Verifica la tua posizione presso l’ufficio anagrafe del tuo Comune e, se <br />
-                        necessario, regolarizza la tua iscrizione entro il ${deadlineDate}.</p>
+                        necessario, regolarizza la tua iscrizione entro ${deadlineDate} di calendario.</p>
                     </mj-text>
                     <mj-spacer height="4px" />
 
@@ -85,7 +85,7 @@
 
                     <mj-text font-size="16px" line-height="24px" color="#17324D">
                         <p>
-                          Il ${verificationDate} effettueremo una nuova verifica. Se la tua posizione<br />
+                          Passati i ${deadlineDate} effettueremo una nuova verifica. Se la tua posizione<br />
                           risulterà regolarizzata, potrai ricevere il bonus. In caso contrario, la<br />
                           richiesta verrà definitivamente respinta.
                         </p>
