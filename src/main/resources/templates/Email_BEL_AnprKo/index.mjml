@@ -1,0 +1,123 @@
+<mjml lang="it">
+    <mj-head>
+        <mj-title>Bonus Elettrodomestici: aggiornamento importante</mj-title>
+        <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
+        <mj-attributes>
+            <mj-all font-family="Titillium Web, Arial" />
+        </mj-attributes>
+        <mj-raw>
+            <style type="text/css">
+                h1 {
+                  font-size: 32px;
+                  line-height: 40px;
+                  color: #17324D;
+                  font-weight: 700;
+                  text-align: left;
+                }
+                p {
+                  margin-top: 0px;
+                  margin-bottom: 0px;
+                }
+            </style>
+        </mj-raw>
+    </mj-head>
+    <mj-body>
+        <mj-wrapper>
+            <!-- logo pagoPA -->
+            <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
+                <mj-column>
+                    <mj-spacer height="48px" />
+                    <mj-text>
+                        <mj-raw>
+                            <img src="https://assets.cdn.io.pagopa.it/logos/organizations/97532760580.png" alt="Logo del Ministero delle Imprese e del Made in Italy" width="80" align="left" style="display:block;width:80px;margin-bottom:0px!important" />
+                        </mj-raw>
+                    </mj-text>
+                </mj-column>
+            </mj-section>
+
+            <!-- Titolo e sottotitolo -->
+            <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
+                <mj-column>
+                    <mj-text color="#17324D" font-weight="bold" align="justify">
+                        <h1>Bonus Elettrodomestici: aggiornamento importante</h1>
+                    </mj-text>
+
+                    <!-- Ciao ${name}, -->
+                    <mj-text font-size="16px" line-height="24px" color="#17324D">
+                        <p>Ciao ${name},</p>
+                    </mj-text>
+                    <mj-spacer height="4px" />
+
+                    <!-- Abbiamo un aggiornamento importante -->
+                    <mj-text font-size="16px" line-height="24px" color="#17324D">
+                        <p>abbiamo un <b>aggiornamento importante sulla tua richiesta di Bonus Elettrodomestici</b>.</p>
+                    </mj-text>
+                    <mj-spacer height="4px" />
+
+                    <!-- Iscrizione ANPR -->
+                    <mj-text font-size="16px" line-height="24px" color="#17324D">
+                        <p>
+                          Dalle verifiche che abbiamo effettuato
+                          <b>non risulta una tua iscrizione<br />
+                           all'ANPR (Anagrafe nazionale della popolazione residente)</b>, ma è un <br />
+                          requisito necessario per l'erogazione del bonus.
+                        </p>
+                    </mj-text>
+                    <mj-spacer height="4px" />
+
+                    <!-- Cosa puoi fare -->
+                    <mj-text font-size="16px" line-height="24px" color="#17324D">
+                        <p><b>Cosa puoi fare?</b></p>
+                    </mj-text>
+                    <mj-spacer height="4px" />
+
+                    <mj-text font-size="16px" line-height="24px" color="#17324D">
+                        <p>Verifica la tua posizione presso l’ufficio anagrafe del tuo Comune e, se <br />
+                        necessario, regolarizza la tua iscrizione entro ${deadlineDate} di calendario.</p>
+                    </mj-text>
+                    <mj-spacer height="4px" />
+
+                    <!-- Entro quando -->
+                    <mj-text font-size="16px" line-height="24px" color="#17324D">
+                        <p><b>Entro quando</b></p>
+                    </mj-text>
+                    <mj-spacer height="4px" />
+
+                    <mj-text font-size="16px" line-height="24px" color="#17324D">
+                        <p>
+                          Passati i ${deadlineDate} effettueremo una nuova verifica. Se la tua posizione<br />
+                          risulterà regolarizzata, potrai ricevere il bonus. In caso contrario, la<br />
+                          richiesta verrà definitivamente respinta.
+                        </p>
+                    </mj-text>
+                    <mj-spacer height="4px" />
+
+                    <!-- Saluti -->
+                    <mj-text font-size="16px" line-height="24px" color="#17324D">
+                        <p>Grazie, a presto!</p>
+                    </mj-text>
+                </mj-column>
+            </mj-section>
+
+            <!-- Footer informativo -->
+            <mj-section background-color="#ffffff">
+                <mj-column>
+                    <mj-spacer height="8px" />
+                    <mj-text font-size="14px" line-height="20px" color="#17324D">
+                        <p>Ricevi questa comunicazione perché hai richiesto il Bonus Elettrodomestici.</p>
+                        <p>Per leggere l'informativa sul trattamento dei dati personali <a href="https://bonuselettrodomestici.it/utente/privacy-policy" style="color: #17324D;">premi qui</a>.</p>
+                        <p>Non rispondere a questa email: è usato solo per l'invio di comunicazione e, non essendo monitorato, non riceverai risposta.</p>
+                    </mj-text>
+                </mj-column>
+            </mj-section>
+
+            <!-- Spazio finale -->
+            <mj-section>
+                <mj-column>
+                    <mj-spacer height="24px" />
+                </mj-column>
+            </mj-section>
+
+        </mj-wrapper>
+    </mj-body>
+</mjml>
