@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "482f05c9-df34-471c-ac32-4a5ee189b54c",
+		"_postman_id": "41740634-e303-4632-b997-a07f1536ced7",
 		"name": "idpay-notification-email-e2e",
 		"description": "Description TBD",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "15747968"
+		"_exporter_id": "30122816"
 	},
 	"item": [
 		{
@@ -19,7 +19,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -37,7 +38,8 @@
 									"//response time is less than 1s\r",
 									"tests[\"Response time is less than 1s\"] = responseTime < 1000;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -63,9 +65,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrlToken}}/welfare/token/test",
+							"raw": "{{baseUrlIdPay}}/welfare/token/test",
 							"host": [
-								"{{baseUrlToken}}"
+								"{{baseUrlIdPay}}"
 							],
 							"path": [
 								"welfare",
@@ -95,7 +97,8 @@
 									"});\r",
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -108,11 +111,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrlEmailNotification}}/users",
+							"raw": "{{baseUrlIdPay}}/email-notification/users",
 							"host": [
-								"{{baseUrlEmailNotification}}"
+								"{{baseUrlIdPay}}"
 							],
 							"path": [
+								"email-notification",
 								"users"
 							]
 						}
@@ -132,7 +136,8 @@
 									"\r",
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -143,7 +148,8 @@
 									"    pm.response.to.have.status(400);\r",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -167,11 +173,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrlEmailNotificationInternal}}/notify",
+							"raw": "{{baseUrlIdPay}}/email-notification/notify",
 							"host": [
-								"{{baseUrlEmailNotificationInternal}}"
+								"{{baseUrlIdPay}}"
 							],
 							"path": [
+								"email-notification",
 								"notify"
 							]
 						}
@@ -191,7 +198,8 @@
 									"\r",
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -202,7 +210,8 @@
 									"    pm.response.to.have.status(204);\r",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -226,11 +235,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrlEmailNotificationInternal}}/notify",
+							"raw": "{{baseUrlIdPay}}/email-notification/notify",
 							"host": [
-								"{{baseUrlEmailNotificationInternal}}"
+								"{{baseUrlIdPay}}"
 							],
 							"path": [
+								"email-notification",
 								"notify"
 							]
 						}
@@ -257,7 +267,8 @@
 									"\r",
 									"pm.collectionVariables.set('status', status[random])"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -268,7 +279,8 @@
 									"    pm.response.to.have.status(400);\r",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -292,11 +304,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrlEmailNotificationInternal}}/notify",
+							"raw": "{{baseUrlIdPay}}/email-notification/notify",
 							"host": [
-								"{{baseUrlEmailNotificationInternal}}"
+								"{{baseUrlIdPay}}"
 							],
 							"path": [
+								"email-notification",
 								"notify"
 							]
 						}
@@ -318,7 +331,8 @@
 									"\r",
 									"pm.collectionVariables.set('status', status[random])"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -329,7 +343,8 @@
 									"    pm.response.to.have.status(204);\r",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -353,11 +368,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrlEmailNotificationInternal}}/notify",
+							"raw": "{{baseUrlIdPay}}/email-notification/notify",
 							"host": [
-								"{{baseUrlEmailNotificationInternal}}"
+								"{{baseUrlIdPay}}"
 							],
 							"path": [
+								"email-notification",
 								"notify"
 							]
 						}
