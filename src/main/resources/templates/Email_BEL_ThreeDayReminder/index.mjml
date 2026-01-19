@@ -69,8 +69,6 @@
                         <p>Ciao ${name},</p>
                         <p>hai già deciso come usare il Bonus Elettrodomestici?</p>
                         <p>Hai tempo <b>fino alle 23:59 del giorno ${voucherEndDate}</b> per usare il contributo e sostituire un vecchio elettrodomestico con uno a basso consumo energetico.</p>
-                        <p><b>Troppo tardi?</b></p>
-                        <p>Se non hai fatto in tempo ad usare il bonus, puoi fare nuovamente richiesta. Se ci sono ancora fondi disponibili, la richiesta verrà inserita in lista d'attesa.</p>
                         <p><b>Hai domande?</b></p>
                         <p>Per avere più dettagli su come e dove usare il bonus, <a href="https://assistenza.ioapp.it/hc/it/articles/40429655391505-Come-e-dove-spendere-il-Bonus-Elettrodomestici" style="color: #0073E6;">leggi la guida</a>.</p>
 
