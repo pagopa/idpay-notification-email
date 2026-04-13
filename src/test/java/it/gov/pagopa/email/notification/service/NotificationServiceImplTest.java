@@ -11,7 +11,7 @@ import it.gov.pagopa.email.notification.mapper.MailMessageMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.mail.MailPreparationException;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
@@ -47,16 +47,16 @@ class NotificationServiceImplTest {
     @Autowired
     private NotificationService notificationService;
 
-    @MockBean
+    @MockitoBean
     private Configuration configuration;
 
-    @MockBean
+    @MockitoBean
     private MailMessageMapper mailMessageMapper;
 
-    @MockBean
+    @MockitoBean
     private MessageService messageService;
 
-    @MockBean
+    @MockitoBean
     private AwsSesConnector awsSesConnector;
 
     private final Configuration configTest = new Configuration(Configuration.VERSION_2_3_23);
