@@ -2,7 +2,7 @@
 <html lang="it" dir="auto" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
-  <title>Notifica di esclusione prodotto - Registro dei beni</title>
+  <title>Credenziali di accesso</title>
   <!--[if !mso]><!-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!--<![endif]-->
@@ -88,11 +88,7 @@
       font-weight: 700;
       text-align: left;
       margin-top: 0px;
-      margin-bottom: 8px;
-    }
-
-    h4 {
-      margin-bottom: 0px;
+      margin-bottom: 12px;
     }
 
     p {
@@ -119,7 +115,7 @@
 </head>
 
 <body style="word-spacing:normal;">
-  <div aria-label="Notifica di esclusione prodotto - Registro dei beni" aria-roledescription="email" style="" role="article" lang="it" dir="auto">
+  <div aria-label="Credenziali di accesso" aria-roledescription="email" style="" role="article" lang="it" dir="auto">
     <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     <div style="margin:0px auto;max-width:600px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
@@ -157,22 +153,20 @@
                   </tbody>
                 </table>
               </div>
-              <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
-              <!-- Titolo e sottotitolo -->
-              <!--[if mso | IE]><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
               <div style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;">
                 <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;background-color:#ffffff;width:100%;">
                   <tbody>
                     <tr>
-                      <td style="border-left:solid 1px #E6E9F2;border-right:solid 1px #E6E9F2;direction:ltr;font-size:0px;padding:20px 0;padding-bottom:10px;padding-top:12px;text-align:center;">
+                      <td style="border-left:solid 1px #E6E9F2;border-right:solid 1px #E6E9F2;direction:ltr;font-size:0px;padding:20px 0;padding-bottom:10px;padding-top:16px;text-align:center;">
                         <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:598px;" ><![endif]-->
                         <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                           <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                             <tbody>
                               <tr>
-                                <td align="left" class="titolo" style="font-size:0px;padding:10px 25px;padding-bottom:4px;word-break:break-word;">
+                                <td align="left" class="titolo" style="font-size:0px;padding:10px 25px;padding-bottom:8px;word-break:break-word;">
                                   <div style="font-family:Titillium Web, Arial;font-size:13px;font-weight:bold;line-height:1;text-align:left;color:#17324D;">
-                                    <h1 style="font-size:32px; line-height:40px;">Registro dei beni: alcuni prodotti<br />non hanno superato il controllo</h1>
+                                    <h1>Il tuo profilo sul Portale Punto<br />Vendita è stato attivato</h1>
                                   </div>
                                 </td>
                               </tr>
@@ -180,27 +174,41 @@
                                 <td align="left" class="intro" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                   <div style="font-family:Titillium Web, Arial;font-size:16px;font-weight:400;line-height:24px;text-align:left;color:#17324D;">
                                     <p style="margin-bottom: 8px;">Ciao,</p>
-                                    <p style="margin-bottom: 12px;">a seguito dei controlli effettuati da Invitalia, uno o più prodotti associati<br />al tuo account nel Registro dei beni sono stati esclusi.</p>
-                                    <p style="margin-bottom: 8px;">I prodotti che non hanno superato il controllo sono:</p>
-                                    <ul style="margin-top: 0px; margin-bottom: 16px;"> ${excludedList} </ul>
-                                    <p style="margin-bottom: 4px;">La motivazione è:</p>
-                                    <p style="margin-bottom: 16px;">${formalMotivation}</p>
-                                    <p style="margin-bottom: 12px;">Per maggiori dettagli, <a href="https://eie.cstar.pagopa.it/elenco-informatico-elettrodomestici" style="color: #0073E6;">accedi al portale</a>.</p>
+                                    <p style="margin-bottom: 12px;">ti comunichiamo che il tuo profilo per accedere al Portale Punto<br />Vendita è stato attivato.</p>
+                                    <p style="margin-bottom: 32px;">Per poter accedere la prima volta, <b>imposta una password.</b><br />Una volta fatto, potrai accedere al portale con il tuo indirizzo email e la<br />password che hai scelto.</p>
+                                    <p style="margin-bottom: 16px;">
+                                      <a href="${setPasswordUrl}" style="color: #0073E6; font-weight: 600; text-decoration: underline;">Imposta la tua password</a>
+                                    </p>
+                                    <p style="margin-bottom: 24px;">Il link per impostare la password sarà valido per i prossimi 7 giorni.</p>
                                   </div>
                                 </td>
                               </tr>
                               <tr>
-                                <td align="left" style="font-size:0px;padding:10px 25px;padding-top:0px;word-break:break-word;">
+                                <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                   <div style="font-family:Titillium Web, Arial;font-size:16px;line-height:24px;text-align:left;color:#17324D;">
-                                    <p style="margin-bottom: 12px;">Hai problemi tecnici o domande? Scrivi a<br><a href="mailto:portale.bonus@registrodeibeni.it" style="color: #0073E6;">portale.bonus@registrodeibeni.it</a></p>
+                                    <p style="margin-bottom: 24px;"><b>Hai problemi tecnici o domande?</b> Scrivi a<br><a href="mailto:${assistanceEmail!'portale.punto.vendita@assistenza.pagopa.it'}" style="color: #0073E6;">${assistanceEmail!'portale.punto.vendita@assistenza.pagopa.it'}</a></p>
                                   </div>
                                 </td>
                               </tr>
                               <tr>
-                                <td align="left" style="font-size:0px;padding:10px 25px;padding-top:0px;word-break:break-word;">
+                                <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                   <div style="font-family:Titillium Web, Arial;font-size:16px;line-height:24px;text-align:left;color:#17324D;">
-                                    <p style="margin-bottom: 0px;">A presto,<br aria-hidden="true">il team di PagoPA</p>
+                                    <p style="margin-bottom: 8px;">A presto,</p>
+                                    <p style="margin-bottom: 12px;">il team di Portale Punto Vendita</p>
                                   </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="font-size:0px;padding:10px 25px;padding-top:0px;padding-bottom:8px;word-break:break-word;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
+                                    <tbody>
+                                      <tr>
+                                        <td align="center" bgcolor="#0073E6" role="presentation" style="border:none;border-radius:4px;cursor:auto;mso-padding-alt:10px 25px;background:#0073E6;" valign="middle">
+                                          <a href="${portalUrl}" style="display:inline-block;background:#0073E6;color:#FFFFFF;font-family:Titillium Web, Arial;font-size:16px;font-weight:600;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:4px;" target="_blank"> Vai al sito </a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
                                 </td>
                               </tr>
                             </tbody>
@@ -233,7 +241,7 @@
                               <tr>
                                 <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                   <div style="font-family:Titillium Web, Arial;font-size:13px;line-height:18px;text-align:left;color:#5C6F82;">
-                                    <p style="margin: 0;">Ricevi questo messaggio perché hai un’utenza attiva nel Portale Registro dei Beni.</p>
+                                    <p style="margin: 0;">Ricevi questo messaggio perché hai un’utenza attiva nel Portale Punto Vendita.</p>
                                   </div>
                                 </td>
                               </tr>
