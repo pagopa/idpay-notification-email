@@ -1,55 +1,15 @@
-<!doctype html>
-<html lang="it" dir="auto" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-
-<head>
-  <title>Notifica di esclusione prodotto - Registro dei beni</title>
-  <!--[if !mso]><!-->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!--<![endif]-->
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style type="text/css">
-    #outlook a {
-      padding: 0;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-    }
-
-    table,
-    td {
-      border-collapse: collapse;
-      mso-table-lspace: 0pt;
-      mso-table-rspace: 0pt;
-    }
-
-    img {
-      border: 0;
-      height: auto;
-      line-height: 100%;
-      outline: none;
-      text-decoration: none;
-      -ms-interpolation-mode: bicubic;
-    }
-
-    p {
-      display: block;
-      margin: 13px 0;
-    }
-
-  </style>
-  <!--[if mso]>
+<!doctype html><html lang="it" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><title>Notifica di esclusione prodotto - Elenco informatico degli elettrodomestici</title><!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style type="text/css">#outlook a { padding:0; }
+body { margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%; }
+table, td { border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt; }
+img { border:0;height:auto;line-height:100%; outline:none;text-decoration:none;-ms-interpolation-mode:bicubic; }
+p { display:block;margin:13px 0; }</style><!--[if mso]>
     <noscript>
-    <xml>
-    <o:OfficeDocumentSettings>
-      <o:AllowPNG/>
-      <o:PixelsPerInch>96</o:PixelsPerInch>
-    </o:OfficeDocumentSettings>
-    </xml>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:AllowPNG/>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
     </noscript>
     <![endif]-->
   <!--[if lte mso 11]>
@@ -184,7 +144,9 @@
                                     <p style="margin-bottom: 8px;">I prodotti che non hanno superato il controllo sono:</p>
                                     <ul style="margin-top: 0px; margin-bottom: 16px;"> ${excludedList} </ul>
                                     <p style="margin-bottom: 4px;">La motivazione è:</p>
-                                    <p style="margin-bottom: 16px;">${formalMotivation}</p>
+                                    <mj-raw>
+                                      <pre style="font-family: 'Titillium Web', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #17324D; margin: 0 0 16px 0; white-space: pre-wrap; word-break: break-word;">${formalMotivation}</pre>
+                                    </mj-raw>
                                     <p style="margin-bottom: 12px;">Per maggiori dettagli, <a href="https://eie.cstar.pagopa.it/elenco-informatico-elettrodomestici" style="color: #0073E6;">accedi al portale</a>.</p>
                                   </div>
                                 </td>
