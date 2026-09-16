@@ -14,7 +14,7 @@
           font-weight: 700;
           text-align: left;
           margin-top: 0px;
-          margin-bottom: 12px;
+          margin-bottom: 0px;
         }
 
         p {
@@ -53,8 +53,8 @@
 
       <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2" padding-top="16px" padding-bottom="10px">
         <mj-column>
-          <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo" padding-bottom="8px">
-            <h1>Il tuo profilo sul Portale Punto<br />Vendita è stato attivato</h1>
+          <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo" padding-bottom="12px">
+            <h1 style="font-size:32px; line-height:40px;">Il tuo profilo sul Portale Punto<br />Vendita è stato attivato</h1>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
             <p style="margin-bottom: 8px;">Ciao,</p>

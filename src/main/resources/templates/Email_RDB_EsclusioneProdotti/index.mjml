@@ -70,7 +70,7 @@
               ${excludedList}
             </ul>
             <p style="margin-bottom: 4px;">La motivazione è:</p>
-            <p style="margin-bottom: 16px;">${formalMotivation}</p>
+            <p style="margin-bottom: 16px; white-space: pre-line;">${formalMotivation}</p>
             <p style="margin-bottom: 12px;">Per maggiori dettagli, <a href="https://eie.cstar.pagopa.it/elenco-informatico-elettrodomestici" style="color: #0073E6;">accedi al portale</a>.</p>
           </mj-text>
 
