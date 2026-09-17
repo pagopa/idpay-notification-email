@@ -1,6 +1,6 @@
 <mjml lang="it">
   <mj-head>
-    <mj-title>Notifica di esclusione prodotto - Registro dei beni</mj-title>
+    <mj-title>Credenziali di accesso</mj-title>
     <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
     <mj-attributes>
       <mj-all font-family="Titillium Web, Arial" />
@@ -14,10 +14,6 @@
           font-weight: 700;
           text-align: left;
           margin-top: 0px;
-          margin-bottom: 8px;
-        }
-
-        h4 {
           margin-bottom: 0px;
         }
 
@@ -55,34 +51,36 @@
         </mj-column>
       </mj-section>
 
-      <!-- Titolo e sottotitolo -->
-      <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2" padding-top="12px" padding-bottom="10px">
+      <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2" padding-top="16px" padding-bottom="10px">
         <mj-column>
-          <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo" padding-bottom="4px">
-            <h1 style="font-size:32px; line-height:40px;">Registro dei beni: alcuni prodotti<br />non hanno superato il controllo</h1>
+          <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo" padding-bottom="12px">
+            <h1 style="font-size:32px; line-height:40px;">Il tuo profilo sul Portale Punto<br />Vendita è stato attivato</h1>
           </mj-text>
-
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
             <p style="margin-bottom: 8px;">Ciao,</p>
-            <p style="margin-bottom: 12px;">a seguito dei controlli effettuati da Invitalia, uno o più prodotti associati<br />al tuo account nel Registro dei beni sono stati esclusi.</p>
-            <p style="margin-bottom: 8px;">I prodotti che non hanno superato il controllo sono:</p>
-            <ul style="margin-top: 0px; margin-bottom: 16px;">
-              ${excludedList}
-            </ul>
-            <p style="margin-bottom: 4px;">La motivazione è:</p>
-            <mj-raw>
-              <pre style="font-family: 'Titillium Web', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #17324D; margin: 0 0 16px 0; white-space: pre-wrap; word-break: break-word;">${formalMotivation}</pre>
-            </mj-raw>
-            <p style="margin-bottom: 12px;">Per maggiori dettagli, <a href="https://eie.cstar.pagopa.it/elenco-informatico-elettrodomestici" style="color: #0073E6;">accedi al portale</a>.</p>
+            <p style="margin-bottom: 12px;">ti comunichiamo che il tuo profilo per accedere al Portale Punto<br />Vendita è stato attivato.</p>
+
+            <p style="margin-bottom: 32px;">Per poter accedere la prima volta, <b>imposta una password.</b><br />Una volta fatto, potrai accedere al portale con il tuo indirizzo email e la<br />password che hai scelto.</p>
+
+            <p style="margin-bottom: 16px;">
+              <a href="${setPasswordUrl}" style="color: #0073E6; font-weight: 600; text-decoration: underline;">Imposta la tua password</a>
+            </p>
+
+            <p style="margin-bottom: 24px;">Il link per impostare la password sarà valido per i prossimi 7 giorni.</p>
           </mj-text>
 
-          <mj-text font-size="16px" line-height="24px" color="#17324D" padding-top="0px">
-            <p style="margin-bottom: 12px;">Hai problemi tecnici o domande? Scrivi a<br><a href="mailto:portale.bonus@registrodeibeni.it" style="color: #0073E6;">portale.bonus@registrodeibeni.it</a></p>
+          <mj-text font-size="16px" line-height="24px" color="#17324D">
+            <p style="margin-bottom: 24px;"><b>Hai problemi tecnici o domande?</b> Scrivi a<br><a href="mailto:${assistanceEmail!'portale.punto.vendita@assistenza.pagopa.it'}" style="color: #0073E6;">${assistanceEmail!'portale.punto.vendita@assistenza.pagopa.it'}</a></p>
           </mj-text>
 
-          <mj-text font-size="16px" line-height="24px" color="#17324D" padding-top="0px">
-            <p style="margin-bottom: 0px;">A presto,<br aria-hidden="true">il team di PagoPA</p>
+          <mj-text font-size="16px" line-height="24px" color="#17324D">
+            <p style="margin-bottom: 8px;">A presto,</p>
+            <p style="margin-bottom: 12px;">il team di Portale Punto Vendita</p>
           </mj-text>
+
+          <mj-button align="left" background-color="#0073E6" color="#FFFFFF" font-size="16px" font-weight="600" border-radius="4px" href="${portalUrl}" padding-top="0px" padding-bottom="8px">
+            Vai al sito
+          </mj-button>
         </mj-column>
       </mj-section>
 
@@ -90,7 +88,7 @@
         <mj-column>
           <mj-divider border-width="1px" border-style="solid" border-color="#E6E9F2" padding-top="10px" padding-bottom="15px" />
           <mj-text font-size="13px" line-height="18px" color="#5C6F82">
-            <p style="margin: 0;">Ricevi questo messaggio perché hai un’utenza attiva nel Portale Registro dei Beni.</p>
+            <p style="margin: 0;">Ricevi questo messaggio perché hai un’utenza attiva nel Portale Punto Vendita.</p>
           </mj-text>
         </mj-column>
       </mj-section>
