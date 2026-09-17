@@ -1,6 +1,6 @@
 <mjml lang="it">
   <mj-head>
-    <mj-title>Prodotti elaborati con successo</mj-title>
+    <mj-title>Notifica di caricamento riuscito - Registro dei beni</mj-title>
     <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
     <mj-attributes>
       <mj-all font-family="Titillium Web, Arial" />
@@ -67,12 +67,15 @@
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
             <p>Ciao,</p>
-            <p>il file dei prodotti ${productFileName} è stato elaborato e tutti i prodotti sono stati caricati correttamente.</p>
+            <p>il file ${productFileName} è stato elaborato correttamente e tutti i prodotti sono stati caricati con successo.</p>
 
-            <p>Per vedere tutti i dettagli <a href="https://eie.cstar.pagopa.it/elenco-informatico-elettrodomestici" style="color: #0073E6;">accedi al portale</a>.</p>
+            <p>Per maggiori dettagli, <a href="https://rdb.cstar.pagopa.it/registro-dei-beni" style="color: #0073E6;">accedi al portale</a>.</p>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D">
-            <p>A presto,<br aria-hidden="true">Il team di PagoPA</p>
+            <p>Hai problemi tecnici o domande? Scrivi a<br><a href="mailto:portale.bonus@registrodeibeni.it" style="color: #0073E6;">portale.bonus@registrodeibeni.it</a>.</p>
+          </mj-text>
+          <mj-text font-size="16px" line-height="24px" color="#17324D">
+            <p>A presto,<br aria-hidden="true">il team di PagoPA</p>
           </mj-text>
         </mj-column>
       </mj-section>
@@ -80,7 +83,7 @@
         <mj-column>
           <mj-spacer height="8px" css-class="spaziatura" />
           <mj-text>
-            <p style="color: #17324D">Ricevi questo messaggio perché hai un’utenza attiva come operatore su Elenco informatico elettrodomestici nell'Area Riservata.</p>
+            <p style="color: #17324D">Ricevi questo messaggio perché hai un’utenza attiva nel Portale Registro dei Beni.</p>
           </mj-text>
         </mj-column>
       </mj-section>
