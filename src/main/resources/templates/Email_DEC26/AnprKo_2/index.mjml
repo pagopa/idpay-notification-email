@@ -1,0 +1,200 @@
+<mjml lang="it">
+  <mj-head>
+    <mj-title>Bonus Decoder: aggiornamento importante</mj-title>
+
+    <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
+
+    <mj-attributes>
+      <mj-all font-family="Titillium Web, Arial" />
+    </mj-attributes>
+
+    <mj-raw>
+      <style type="text/css">
+        h1 {
+          margin: 0;
+          font-size: 32px;
+          line-height: 40px;
+          color: #17324D;
+          font-weight: 700;
+          text-align: left;
+        }
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      </style>
+
+      <style type="text/css">
+        @media (min-width:600px) {
+          body {
+            background-color: #ffffff;
+          }
+
+          .mobile {
+            display: none;
+          }
+
+          .desktop {
+            display: block;
+          }
+        }
+      </style>
+    </mj-raw>
+  </mj-head>
+
+  <mj-body background-color="#ffffff">
+
+    <mj-wrapper background-color="#ffffff" padding="0">
+
+      <!-- Logo -->
+      <mj-section background-color="#ffffff" padding="0">
+        <mj-column>
+
+          <mj-spacer height="48px" />
+
+          <mj-image src="https://assets.cdn.io.pagopa.it/logos/organizations/97532760580.png" alt="Logo del Ministero delle Imprese e del Made in Italy" width="48px" align="left" padding="0 25px" />
+
+          <mj-spacer height="32px" />
+
+        </mj-column>
+      </mj-section>
+
+      <!-- Contenuto -->
+      <mj-section background-color="#ffffff" padding="0">
+        <mj-column>
+
+          <!-- Titolo -->
+
+          <mj-text padding="0 25px" align="left">
+            <h1>
+              Bonus Decoder: aggiornamento<br />
+              importante
+            </h1>
+          </mj-text>
+
+          <mj-spacer height="16px" />
+
+          <!-- Saluto -->
+
+          <mj-text font-size="16px" line-height="24px" color="#17324D" padding="0 25px">
+            <p>Ciao ${name},</p>
+          </mj-text>
+
+          <mj-spacer height="16px" />
+
+          <!-- Aggiornamento importante -->
+
+          <mj-text font-size="16px" line-height="24px" color="#263238" padding="0 25px">
+            <p>
+              abbiamo un <b>aggiornamento importante sulla tua richiesta di Bonus Elettrodomestici.</b>
+            </p>
+          </mj-text>
+
+          <mj-spacer height="16px" />
+
+          <!-- Verifica ANPR -->
+
+          <mj-text font-size="16px" line-height="24px" color="#263238" padding="0 25px">
+            <p>
+              Dalle verifiche che abbiamo effettuato
+              <b>non risulta una tua iscrizione all’ANPR
+                (Anagrafe nazionale della popolazione residente)</b>,
+              ma è un requisito necessario per l’erogazione del bonus.
+            </p>
+          </mj-text>
+
+          <mj-spacer height="32px" />
+
+          <!-- Cosa puoi fare -->
+
+          <mj-text font-size="16px" line-height="24px" color="#263238" font-weight="700" padding="0 25px">
+            <p>Cosa puoi fare?</p>
+          </mj-text>
+
+          <mj-spacer height="12px" />
+
+          <mj-text font-size="16px" line-height="24px" color="#263238" padding="0 25px">
+            <p>
+              Verifica la tua posizione presso l'ufficio anagrafe del tuo Comune e,
+              se necessario, regolarizza la tua iscrizione entro il ${lastDate}.
+            </p>
+          </mj-text>
+
+          <mj-spacer height="28px" />
+
+          <!-- Entro quando -->
+
+          <mj-text font-size="16px" line-height="24px" color="#263238" font-weight="700" padding="0 25px">
+            <p>Entro quando</p>
+          </mj-text>
+
+          <mj-spacer height="12px" />
+
+          <mj-text font-size="16px" line-height="24px" color="#263238" padding="0 25px">
+            <p>
+              Il ${checkDate} effettueremo una nuova verifica.
+              Se la tua posizione risulterà regolarizzata, potrai ricevere il bonus.
+              In caso contrario, la richiesta verrà definitivamente respinta.
+            </p>
+          </mj-text>
+
+          <mj-spacer height="32px" />
+
+          <!-- Chiusura -->
+
+          <mj-text font-size="16px" line-height="24px" color="#263238" padding="0 25px">
+            <p>Grazie, a presto!</p>
+          </mj-text>
+
+          <mj-spacer height="32px" />
+
+        </mj-column>
+      </mj-section>
+
+      <!-- Separatore -->
+      <mj-section background-color="#ffffff" padding="0">
+        <mj-column>
+
+          <mj-divider border-width="1px" border-style="solid" border-color="#E6E9F2" padding="0 25px" />
+
+        </mj-column>
+      </mj-section>
+
+      <!-- Footer -->
+      <mj-section background-color="#ffffff" padding="0">
+        <mj-column>
+
+          <mj-spacer height="24px" />
+
+          <mj-text font-size="12px" line-height="16px" color="#5C6F82" padding="0 25px">
+            <p>
+              Ricevi questa comunicazione perché hai richiesto il Bonus Decoder.
+            </p>
+
+            <p>
+              Per leggere l'informativa sul trattamento dei dati personali
+              <a href="https://pari.pagopa.it/bonusdecoder/utente/privacy-policy" style="color:#5C6F82; text-decoration:underline;">
+                premi qui
+              </a>.
+            </p>
+          </mj-text>
+
+          <mj-spacer height="20px" />
+
+          <mj-text font-size="12px" line-height="16px" color="#5C6F82" padding="0 25px">
+            <p>
+              Non rispondere a questa email: è usato solo per l'invio di comunicazioni e,
+              non essendo monitorato, non riceverai risposta.
+            </p>
+          </mj-text>
+
+          <mj-spacer height="32px" />
+
+        </mj-column>
+      </mj-section>
+
+    </mj-wrapper>
+
+  </mj-body>
+</mjml>
