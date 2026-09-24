@@ -75,7 +75,7 @@
                         <p><b>Come fare?</b></p>
                         <p>Per avere più informazioni su come e dove usare il bonus, <a href="https://assistenza.ioapp.it/hc/it/articles/40429655391505-Come-e-dove-spendere-il-Bonus-Elettrodomestici" style="color: #0073E6;">leggi i dettagli</a>.</p>
                         <p style="margin-bottom: 0px"><b>Importante:</b> ricorda che  puoi usare il bonus solo se hai un vecchio elettrodomestico da smaltire. Concorda con il venditore quando e come consegnarlo, ma non smaltirlo autonomamente in discarica.</p>
-                        <p><a href=" https://bonuselettrodomestici.it/lista-punti-vendita" style="color: #0073E6; **text-decoration: none;**">Dove puoi spenderlo?</a>.</p>
+                        <p><a href="https://pari.pagopa.it/bonuselettrodomestici/lista-punti-vendita" style="color: #0073E6; **text-decoration: none;**">Dove puoi spenderlo?</a>.</p>
 
                     </mj-text>
                     <mj-button
@@ -86,7 +86,7 @@
                             font-weight="bold"
                             padding-top="10px"
                             padding-bottom="16px"
-                            href="https://bonuselettrodomestici.it/utente"
+                            href="https://pari.pagopa.it/bonuselettrodomestici/utente"
                     >
                         Vai al sito
                     </mj-button>
@@ -97,7 +97,7 @@
                     <mj-spacer height="8px" css-class="spaziatura" />
                     <mj-text>
                         <p style="color: #17324D; margin-bottom: 0px">Ricevi questa comunicazione perche hai richiesto il Bonus Elettrodomestici.</p>
-                        <p style="color: #17324D">Per leggere l'informativa sul trattamento dei dati personali <a href="https://bonuselettrodomestici.it/utente/privacy-policy" style="color: #17324D;">premi qui</a>.</p>
+                        <p style="color: #17324D">Per leggere l'informativa sul trattamento dei dati personali <a href="https://pari.pagopa.it/bonuselettrodomestici/utente/privacy-policy" style="color: #17324D;">premi qui</a>.</p>
                         <p style="color: #17324D">Non rispondere a questa email: è usato solo per l'invio di comunicazione e, non essendo monitorato, non riceverai risposta.</p>
                     </mj-text>
                 </mj-column>
