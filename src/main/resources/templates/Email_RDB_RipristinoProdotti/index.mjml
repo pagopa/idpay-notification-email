@@ -1,3 +1,4 @@
+<mjml lang="it">
   <mj-head>
     <mj-title>Notifica di caricamento parziale - Registro dei beni</mj-title>
     <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
@@ -41,21 +42,11 @@
   </mj-head>
   <mj-body>
     <mj-wrapper>
-      <!-- vuoto sopra
-      <mj-section>
-        <mj-column>
-          <mj-spacer height="32px" />
-        </mj-column>
-      </mj-section>-->
       <!-- logo pagoPA -->
       <mj-section background-color="#ffffff" border-top="solid 8px #80C5D3" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
         <mj-column>
           <mj-spacer height="48px" css-class="spaziatura" />
-          <mj-text>
-            <mj-raw>
-              <img src="https://selfcare.pagopa.it/assets/logo_pagopacorp.png" alt="Logo di PagoPA S.p.A." class="logopagopa" width="116" align="left" style="display:block;width:116px;" />
-            </mj-raw>
-          </mj-text>
+          <mj-image src="https://selfcare.pagopa.it/assets/logo_pagopacorp.png" alt="Logo di PagoPA S.p.A." width="116px" align="left" padding-bottom="0px" padding-top="0px" />
         </mj-column>
       </mj-section>
       <!-- Titolo e sottotitolo -->
@@ -71,7 +62,7 @@
             <ul>
               ${ripristinedList}
             </ul>
-            <p>Per maggiori dettagli, <a href="https://rdb.cstar.pagopa.it/registro-dei-beni" style="color: #0073E6;">accedi al portale</a>.</p>
+            <p style="margin-bottom: 12px;">Per maggiori dettagli, <a href="${portalUrl}" style="color: #0073E6;">accedi al portale</a>.</p>
           </mj-text>
           <mj-text font-size="16px" line-height="24px" color="#17324D">
             <p>Hai problemi tecnici o domande? Scrivi a<br><a href="mailto:portale.bonus@registrodeibeni.it" style="color: #0073E6;">portale.bonus@registrodeibeni.it</a>.</p>
