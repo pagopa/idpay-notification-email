@@ -69,7 +69,7 @@
             <mj-raw>
               <pre style="font-family: 'Titillium Web', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #17324D; margin: 0 0 16px 0; white-space: pre-wrap; word-break: break-word;">${formalMotivation}</pre>
             </mj-raw>
-            <p style="margin-bottom: 12px;">Per maggiori dettagli, <a href="https://rdb.cstar.pagopa.it/registro-dei-beni" style="color: #0073E6;">accedi al portale</a>.</p>
+            <p style="margin-bottom: 12px;">Per maggiori dettagli, <a href="${portalUrl}" style="color: #0073E6;">accedi al portale</a>.</p>
           </mj-text>
 
           <mj-text font-size="16px" line-height="24px" color="#17324D" padding-top="0px">
