@@ -105,7 +105,7 @@
                     <mj-spacer height="8px" />
                     <mj-text font-size="14px" line-height="20px" color="#17324D">
                         <p>Ricevi questa comunicazione perché hai richiesto il Bonus Elettrodomestici.</p>
-                        <p>Per leggere l'informativa sul trattamento dei dati personali <a href="https://bonuselettrodomestici.it/utente/privacy-policy" style="color: #17324D;">premi qui</a>.</p>
+                        <p>Per leggere l'informativa sul trattamento dei dati personali <a href="https://pari.pagopa.it/bonusdelettrodomestici/utente/privacy-policy" style="color: #17324D;">premi qui</a>.</p>
                         <p>Non rispondere a questa email: è usato solo per l'invio di comunicazione e, non essendo monitorato, non riceverai risposta.</p>
                     </mj-text>
                 </mj-column>
