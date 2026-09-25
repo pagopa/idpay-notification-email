@@ -33,7 +33,7 @@
             <style type="text/css">
                 @media (min-width:600px) {
                     body {
-                        background-color: #E6E9F2;
+                        background-color: #ffffff;
                     }
 
                     .mobile {
@@ -54,8 +54,8 @@
             <!-- Logo -->
             <mj-section
                 background-color="#ffffff"
-                border-left="solid 1px #E6E9F2"
-                border-right="solid 1px #E6E9F2"
+                border-left="solid 0px #E6E9F2"
+                border-right="solid 0px #E6E9F2"
             >
                 <mj-column>
                     <mj-spacer height="48px" css-class="spaziatura" />
@@ -77,8 +77,8 @@
             <!-- Titolo e contenuto -->
             <mj-section
                 background-color="#ffffff"
-                border-left="solid 1px #E6E9F2"
-                border-right="solid 1px #E6E9F2"
+                border-left="solid 0px #E6E9F2"
+                border-right="solid 0px #E6E9F2"
             >
                 <mj-column>
 
@@ -160,8 +160,8 @@
             <!-- Separatore -->
             <mj-section
                 background-color="#ffffff"
-                border-left="solid 1px #E6E9F2"
-                border-right="solid 1px #E6E9F2"
+                border-left="solid 0px #E6E9F2"
+                border-right="solid 0px #E6E9F2"
                 padding-bottom="0"
             >
                 <mj-column>
@@ -176,8 +176,8 @@
             <!-- Footer -->
             <mj-section
                 background-color="#ffffff"
-                border-left="solid 1px #E6E9F2"
-                border-right="solid 1px #E6E9F2"
+                border-left="solid 0px #E6E9F2"
+                border-right="solid 0px #E6E9F2"
             >
                 <mj-column>
 
@@ -214,8 +214,8 @@
             <!-- Spazio finale -->
             <mj-section
                 background-color="#ffffff"
-                border-left="solid 1px #E6E9F2"
-                border-right="solid 1px #E6E9F2"
+                border-left="solid 0px #E6E9F2"
+                border-right="solid 0px #E6E9F2"
             >
                 <mj-column>
                     <mj-spacer height="24px" css-class="spaziatura" />
