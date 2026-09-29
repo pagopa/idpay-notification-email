@@ -135,7 +135,7 @@
                         padding="0 25px"
                     >
                         <p>
-                            Il voucher sarà valido per i <b>prossimi 15 giorni</b>.
+                            Il voucher sarà valido per i <b>prossimi 30 giorni</b>.
                         </p>
                     </mj-text>
 
