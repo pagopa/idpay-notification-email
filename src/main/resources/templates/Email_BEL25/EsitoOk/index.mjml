@@ -49,7 +49,7 @@
               </mj-column>
             </mj-section>-->
             <!-- logo pagoPA -->
-            <mj-section background-color="#ffffff"  border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
+            <mj-section background-color="#ffffff">
                 <mj-column>
                     <mj-spacer height="48px" css-class="spaziatura" />
                     <mj-text>
@@ -60,20 +60,20 @@
                 </mj-column>
             </mj-section>
             <!-- Titolo e sottotitolo -->
-            <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
+            <mj-section background-color="#ffffff">
                 <mj-column>
                     <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo">
-                        <h1 style="font-size:32px; line-height:40px;">Hai Ottenuto il bonus!</h1>
+                        <h1 style="font-size:32px; line-height:40px;">Hai ottenuto il bonus!</h1>
                     </mj-text>
                     <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
-                        <p>Ciao ${name},</p>
-                        <p style="margin-bottom: 0px">Hai ottenuto il Bonus da ${amount}€. Sarà valido <b>per i prossimi 15 giorni.</b></p>
-                        <p>Puoi consultarlo e gestirlo direttamente sul <a href="https://bonuselettrodomestici.it/utente" style="color: #0073E6;">sito dedicato</a>, dove troverai tutti i dettagli sull'importo, la scadenza e le modalità d'uso.</p>
+                        <p style="margin-bottom: 32px">Ciao ${name},</p>
+                        <p style="margin-bottom: 0px">hai ottenuto il Bonus da ${amount}€. Sarà valido <b>per i prossimi 15 giorni.</b></p>
+                        <p>Puoi consultarlo e gestirlo direttamente sul <a href="https://bonuselettrodomestici.it/utente" style="color: #0073E6; text-decoration: underline;">sito dedicato</a>, dove troverai tutti i dettagli sull’importo, la scadenza e le modalità d’uso.</p>
                         <p style="margin-bottom: 0px"><b>Cosa puoi fare ora?</b></p>
-                        <p>Puoi usarlo per ottenere uno sconto del 30% sul prezzo d'acquisto di un elettrodomestico nuovo ad alta efficienza, fino ad un massimo di ${amount}€.</p>
+                        <p>Puoi usarlo per ottenere uno sconto del 30% sui prodotti previsti fino ad un massimo di ${amount}€.</p>
                         <p style="margin-bottom: 0px"><b>Come fare?</b></p>
-                        <p>Per avere più informazioni su come e dove usare il bonus, <a href="https://assistenza.ioapp.it/hc/it/articles/40429655391505-Come-e-dove-spendere-il-Bonus-Elettrodomestici" style="color: #0073E6;">leggi i dettagli</a>.</p>
-                        <p style="margin-bottom: 0px"><b>Importante:</b> ricorda che puoi usare il bonus solo se hai un vecchio elettrodomestico da smaltire. Concorda con il venditore quando e come consegnarlo, ma non smaltirlo autonomamente in discarica.</p>
+                        <p style="margin-bottom: 24px">Per avere più informazioni su come e dove usare il bonus, <a href="https://assistenza.ioapp.it/hc/it/articles/40429655391505-Come-e-dove-spendere-il-Bonus-Elettrodomestici" style="color: #0073E6; text-decoration: underline;">leggi i dettagli</a>.</p>
+                        <p style="margin-bottom: 0px"><b>Importante:</b> ricorda che puoi usare il bonus solo per le finalità previste.</p>
 
                     </mj-text>
                     <mj-button
@@ -95,15 +95,14 @@
                             Aggiungi al Wallet
                         </span>
                     </mj-button>
+                    <mj-divider border-color="#E6E9F2" border-width="1px" padding="40px 25px 0px" />
                 </mj-column>
             </mj-section>
-            <mj-section>
+            <mj-section background-color="#ffffff">
                 <mj-column>
-                    <mj-spacer height="8px" css-class="spaziatura" />
-                    <mj-text>
-                        <p style="color: #17324D; margin-bottom: 0px">Ricevi questa comunicazione perche hai richiesto il Bonus.</p>
-                        <p style="color: #17324D">Per leggere l'informativa sul trattamento dei dati personali <a href="https://bonuselettrodomestici.it/utente/privacy-policy" style="color: #17324D;">premi qui</a>.</p>
-                        <p style="color: #17324D">Non rispondere a questa email: è usato solo per l'invio di comunicazione e, non essendo monitorato, non riceverai risposta.</p>
+                    <mj-text font-size="14px" line-height="18px" font-weight="400" color="#5C6F82">
+                        <p style="margin: 0">Ricevi questa comunicazione perché hai richiesto il Bonus.<br />Per leggere l'informativa sul trattamento dei dati personali <span style="text-decoration: underline;">premi qui</span>.</p>
+                        <p style="margin: 24px 0 0">Non rispondere a questa email: è usato solo per l’invio di comunicazioni e, non essendo monitorato, non riceverai risposta.</p>
                     </mj-text>
                 </mj-column>
             </mj-section>
