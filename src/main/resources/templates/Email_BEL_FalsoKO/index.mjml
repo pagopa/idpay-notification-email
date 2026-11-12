@@ -1,0 +1,53 @@
+<mjml lang="it">
+    <mj-body>
+        <mj-wrapper>
+            <!-- vuoto sopra
+            <mj-section>
+              <mj-column>
+                <mj-spacer height="32px" />
+              </mj-column>
+            </mj-section>-->
+            <!-- logo pagoPA -->
+            <mj-section background-color="#ffffff"  border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
+                <mj-column>
+                    <mj-spacer height="48px" css-class="spaziatura" />
+                    <mj-text>
+                        <mj-raw>
+                            <img src="https://assets.cdn.io.pagopa.it/logos/organizations/97532760580.png" alt="Logo del Ministero delle Imprese e del Made in Italy" width="80" align="left" style="display:block;width:80px;margin-bottom: 0px!important" />
+                        </mj-raw>
+                    </mj-text>
+                </mj-column>
+            </mj-section>
+            <!-- Titolo e sottotitolo -->
+            <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
+                <mj-column>
+                    <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
+                        <p>Ciao ${name},</p>
+                        <p style="margin-bottom: 0px">abbiamo un <b>aggiornamento importante sulla tua richiesta di Bonus Elettrodomestici.</b></p>
+                        <p>Hai ricevuto per errore un messaggio in cui si comunicava che la richiesta non era stata accettata.</p>
+                        <p>Una buona notizia per te: <b>la tua richiesta è stata acquisita correttamente ed è in coda per le verifiche.</b></p>
+                        <p style="margin-bottom: 0px"><b>Cosa succede ora?</b></p>
+                    </mj-text>
+                    <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left">
+                        <ul style="padding-left: 20px; margin-top: 0;">
+                            <li>Se non l'hai già ricevuta, riceverai una nuova comunicazione con l'esito corretto. Controlla nell’app IO o sul sito <a href="https://bonuselettrodomestici.it/utente" style="color: #0073E6;">bonuselettrodomestici.it/utente </a></li>
+                            <li>L'importo del bonus verrà calcolato in base all'ISEE verificato con INPS</li>
+                        </ul>
+                    </mj-text>
+					<mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro">
+                        <p>Grazie per la pazienza.</p>
+                    </mj-text>
+                </mj-column>
+            </mj-section>
+                </mj-column>
+            </mj-section>
+
+            <!-- vuoto sotto -->
+            <mj-section>
+                <mj-column>
+                    <mj-spacer height="24px" css-class="spaziatura" />
+                </mj-column>
+            </mj-section>
+        </mj-wrapper>
+    </mj-body>
+</mjml>
