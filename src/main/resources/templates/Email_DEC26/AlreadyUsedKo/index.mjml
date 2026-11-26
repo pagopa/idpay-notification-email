@@ -144,7 +144,7 @@
                         <p>
                             Per avere più informazioni sui requisiti del bonus,
                             <a
-                                href="${requirementsLink}"
+                                href="https://pari.pagopa.it/bonusdecoder/utente"
                                 style="color:#263238; text-decoration:underline;"
                             >
                                 leggi i dettagli.
@@ -173,7 +173,7 @@
                         padding="0 25px"
                     >
                         <p>
-                            Se pensi che ci sia stato un errore, segnalalo a ${ENTE_GESTORE}.
+                            Se pensi che ci sia stato un errore, segnalalo a ${managedEntity}.
                         </p>
                     </mj-text>
 
